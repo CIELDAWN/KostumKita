@@ -1,6 +1,6 @@
 ﻿namespace KostumKita
 {
-    partial class Form1
+    partial class FormRegister
     {
         /// <summary>
         ///  Required designer variable.
@@ -123,7 +123,7 @@
             dtp_Tanggal_Lahir.TabIndex = 9;
             dtp_Tanggal_Lahir.ValueChanged += dateTimePicker1_ValueChanged;
             // 
-            // Form1
+            // Form_Register
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -137,8 +137,8 @@
             Controls.Add(label2);
             Controls.Add(tb_username);
             Controls.Add(label1);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "Form_Register";
+            Text = "FormRegister";
             ResumeLayout(false);
             PerformLayout();
         }
