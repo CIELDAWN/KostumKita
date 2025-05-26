@@ -90,9 +90,14 @@ namespace KostumKita
             }
         }
 
-        
+
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormRegister_Load(object sender, EventArgs e)
         {
 
         }
