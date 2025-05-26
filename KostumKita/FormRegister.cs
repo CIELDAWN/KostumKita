@@ -38,7 +38,7 @@ namespace KostumKita
                 if (tb_username != null && tb_email != null && dtp_Tanggal_Lahir != null && tb_Password != null)
                 {
                     string username = tb_username.Text;
-
+                    
                     string email = tb_email.Text;
                     if (!email.EndsWith("@gmail.com", StringComparison.OrdinalIgnoreCase) ||
                         email.EndsWith("@yahoo.com", StringComparison.OrdinalIgnoreCase))
@@ -70,6 +70,12 @@ namespace KostumKita
                         return;
                     }
 
+                    if (tb_Password.Text != tb_ConfirmPassword.Text)
+                    {
+                        MessageBox.Show("Password Tidak Sama", "Silahkan Masukkan Kembali", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
                     bool isRegistered = Regis.Register(username, tanggal_lahir, email, password);
                     if (isRegistered)
                     {
@@ -98,6 +104,11 @@ namespace KostumKita
         }
 
         private void FormRegister_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

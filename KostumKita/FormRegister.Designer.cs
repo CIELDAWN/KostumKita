@@ -35,6 +35,7 @@
             button1 = new Button();
             dtp_Tanggal_Lahir = new DateTimePicker();
             pictureBox1 = new PictureBox();
+            tb_ConfirmPassword = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -93,12 +94,21 @@
             pictureBox1.Size = new Size(737, 489);
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
+            // tb_ConfirmPassword
+            // 
+            tb_ConfirmPassword.Location = new Point(360, 225);
+            tb_ConfirmPassword.Name = "tb_ConfirmPassword";
+            tb_ConfirmPassword.Size = new Size(190, 23);
+            tb_ConfirmPassword.TabIndex = 11;
             // 
             // FormRegister
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(728, 450);
+            Controls.Add(tb_ConfirmPassword);
             Controls.Add(dtp_Tanggal_Lahir);
             Controls.Add(button1);
             Controls.Add(tb_email);
@@ -126,5 +136,6 @@
         private Button button1;
         private DateTimePicker dtp_Tanggal_Lahir;
         private PictureBox pictureBox1;
+        private TextBox tb_ConfirmPassword;
     }
 }
