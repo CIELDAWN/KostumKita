@@ -33,6 +33,9 @@ namespace KostumKita
                         if (valid)
                         {
                             MessageBox.Show("Login Sukses. Klik untuk Melanjutkan Halaman", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            HomepageKostumer homepage = new HomepageKostumer();
+                            homepage.Show();
+                            this.Hide();
                         }
                         else
                         {
