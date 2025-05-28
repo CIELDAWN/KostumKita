@@ -15,21 +15,43 @@ namespace KostumKita
         public HomepageKostumer()
         {
             InitializeComponent();
+
+            Panel panelHeader = new Panel();
+            panelHeader.Height = 100;
+            panelHeader.Dock = DockStyle.Top;
+            panelHeader.BackColor = Color.DarkRed;
+
+            Panel panelFooter = new Panel();
+            panelFooter.Height = 100;
+            panelFooter.Dock = DockStyle.Bottom;
+            panelFooter.BackColor = Color.DarkRed;
+
+            Panel scrollPanel = new Panel();
+            scrollPanel.Dock = DockStyle.Fill;
+            scrollPanel.AutoScroll = true;
+            scrollPanel.BackColor = Color.WhiteSmoke;
+
+            Panel panelHomepage = new Panel();
+            panelHomepage.AutoSize = true;
+            panelHomepage.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            panelHomepage.Dock = DockStyle.Top;
+            panelHomepage.BackColor = Color.Transparent;
+
+            // Tambahkan konten ke panelHomepage (misalnya, gambar, card, label, tombol, dsb)
+            //panelHomepage.Controls.Add(konten1);
+            //panelHomepage.Controls.Add(konten2);
+            //panelHomepage.Controls.Add(konten3);
+  
+            scrollPanel.Controls.Add(panelHomepage);
+
+            this.Controls.Add(scrollPanel);
+            this.Controls.Add(panelFooter);
+            this.Controls.Add(panelHeader);
         }
 
         private void HomepageKostumer_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
+            
         }
 
         private void List_Kostum_Click(object sender, EventArgs e)
@@ -59,6 +81,11 @@ namespace KostumKita
             ListKostum listKostumForm = new ListKostum();
             listKostumForm.Show();
             this.Hide();
+        }
+
+        private void panel_homepage_Paint(object sender, PaintEventArgs e)
+        {
+            
         }
     }
 }

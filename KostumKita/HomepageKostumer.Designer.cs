@@ -29,24 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomepageKostumer));
-            pictureBox1 = new PictureBox();
             List_Kostum = new Button();
             keranjang = new Button();
             Transaksi = new Button();
             ExploreKostum = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel_homepage = new Panel();
+            panel_homepage.SuspendLayout();
             SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackgroundImage = Properties.Resources.Homepage_Kostumer_1;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(-24, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(769, 998);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click_1;
             // 
             // List_Kostum
             // 
@@ -55,7 +44,7 @@
             List_Kostum.BackgroundImageLayout = ImageLayout.Zoom;
             List_Kostum.Font = new Font("Britannic Bold", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             List_Kostum.ForeColor = Color.Maroon;
-            List_Kostum.Location = new Point(168, 13);
+            List_Kostum.Location = new Point(190, 14);
             List_Kostum.Name = "List_Kostum";
             List_Kostum.Size = new Size(55, 24);
             List_Kostum.TabIndex = 1;
@@ -69,7 +58,7 @@
             keranjang.BackgroundImage = (Image)resources.GetObject("keranjang.BackgroundImage");
             keranjang.BackgroundImageLayout = ImageLayout.Zoom;
             keranjang.ForeColor = SystemColors.ControlLightLight;
-            keranjang.Location = new Point(257, 13);
+            keranjang.Location = new Point(285, 14);
             keranjang.Name = "keranjang";
             keranjang.Size = new Size(57, 24);
             keranjang.TabIndex = 2;
@@ -80,7 +69,7 @@
             // 
             Transaksi.BackgroundImage = Properties.Resources.Screenshot_2025_05_28_094540;
             Transaksi.BackgroundImageLayout = ImageLayout.Zoom;
-            Transaksi.Location = new Point(347, 13);
+            Transaksi.Location = new Point(382, 14);
             Transaksi.Name = "Transaksi";
             Transaksi.Size = new Size(53, 24);
             Transaksi.TabIndex = 3;
@@ -92,7 +81,7 @@
             ExploreKostum.BackColor = Color.Maroon;
             ExploreKostum.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ExploreKostum.ForeColor = SystemColors.ControlLightLight;
-            ExploreKostum.Location = new Point(10, 575);
+            ExploreKostum.Location = new Point(11, 609);
             ExploreKostum.Name = "ExploreKostum";
             ExploreKostum.Size = new Size(154, 31);
             ExploreKostum.TabIndex = 4;
@@ -100,29 +89,38 @@
             ExploreKostum.UseVisualStyleBackColor = false;
             ExploreKostum.Click += ExploreKostum_Click;
             // 
+            // panel_homepage
+            // 
+            panel_homepage.BackgroundImage = (Image)resources.GetObject("panel_homepage.BackgroundImage");
+            panel_homepage.Controls.Add(ExploreKostum);
+            panel_homepage.Controls.Add(Transaksi);
+            panel_homepage.Controls.Add(keranjang);
+            panel_homepage.Controls.Add(List_Kostum);
+            panel_homepage.Location = new Point(2, -1);
+            panel_homepage.Name = "panel_homepage";
+            panel_homepage.Size = new Size(782, 747);
+            panel_homepage.TabIndex = 5;
+            panel_homepage.Paint += panel_homepage_Paint;
+            // 
             // HomepageKostumer
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(728, 749);
-            Controls.Add(ExploreKostum);
-            Controls.Add(Transaksi);
-            Controls.Add(keranjang);
-            Controls.Add(List_Kostum);
-            Controls.Add(pictureBox1);
+            ClientSize = new Size(783, 749);
+            Controls.Add(panel_homepage);
             Name = "HomepageKostumer";
             Text = "HomepageKostumer";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel_homepage.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private PictureBox pictureBox1;
         private Button List_Kostum;
         private Button keranjang;
         private Button Transaksi;
         private Button ExploreKostum;
+        private Panel panel_homepage;
     }
 }

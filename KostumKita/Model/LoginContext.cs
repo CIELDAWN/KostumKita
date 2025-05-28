@@ -12,7 +12,7 @@ namespace KostumKita.Model
         private readonly string connStr;
         public LoginContext()
         {
-            connStr = "Host = localhost; Username = postgres; Password = Sinta2074; Database = KostumKita";
+            connStr = "Host = localhost; Username = postgres; Password = blackclover1; Database = KostumKita";
         }
 
         public bool Validate(string username, string password, out int user_ID)

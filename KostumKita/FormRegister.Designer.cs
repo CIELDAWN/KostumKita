@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegister));
             tb_username = new TextBox();
             npgsqlCommandBuilder1 = new Npgsql.NpgsqlCommandBuilder();
             tb_Password = new TextBox();
@@ -41,7 +42,7 @@
             // 
             // tb_username
             // 
-            tb_username.Location = new Point(149, 179);
+            tb_username.Location = new Point(147, 183);
             tb_username.Name = "tb_username";
             tb_username.Size = new Size(190, 23);
             tb_username.TabIndex = 1;
@@ -53,14 +54,14 @@
             // 
             // tb_Password
             // 
-            tb_Password.Location = new Point(361, 179);
+            tb_Password.Location = new Point(147, 275);
             tb_Password.Name = "tb_Password";
-            tb_Password.Size = new Size(188, 23);
+            tb_Password.Size = new Size(190, 23);
             tb_Password.TabIndex = 6;
             // 
             // tb_email
             // 
-            tb_email.Location = new Point(149, 225);
+            tb_email.Location = new Point(377, 183);
             tb_email.Name = "tb_email";
             tb_email.Size = new Size(190, 23);
             tb_email.TabIndex = 7;
@@ -68,7 +69,7 @@
             // button1
             // 
             button1.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(233, 309);
+            button1.Location = new Point(231, 314);
             button1.Name = "button1";
             button1.Size = new Size(239, 23);
             button1.TabIndex = 8;
@@ -79,15 +80,15 @@
             // dtp_Tanggal_Lahir
             // 
             dtp_Tanggal_Lahir.Font = new Font("Times New Roman", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dtp_Tanggal_Lahir.Location = new Point(260, 277);
+            dtp_Tanggal_Lahir.Location = new Point(256, 230);
             dtp_Tanggal_Lahir.Name = "dtp_Tanggal_Lahir";
-            dtp_Tanggal_Lahir.Size = new Size(183, 20);
+            dtp_Tanggal_Lahir.Size = new Size(190, 20);
             dtp_Tanggal_Lahir.TabIndex = 9;
             dtp_Tanggal_Lahir.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // pictureBox1
             // 
-            pictureBox1.BackgroundImage = Properties.Resources.Frame_1022;
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox1.Location = new Point(-6, -15);
             pictureBox1.Name = "pictureBox1";
@@ -98,7 +99,7 @@
             // 
             // tb_ConfirmPassword
             // 
-            tb_ConfirmPassword.Location = new Point(360, 225);
+            tb_ConfirmPassword.Location = new Point(377, 273);
             tb_ConfirmPassword.Name = "tb_ConfirmPassword";
             tb_ConfirmPassword.Size = new Size(190, 23);
             tb_ConfirmPassword.TabIndex = 11;
