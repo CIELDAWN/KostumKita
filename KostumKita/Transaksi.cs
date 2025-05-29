@@ -15,6 +15,7 @@ namespace KostumKita
         public Transaksi()
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized;
         }
     }
 }

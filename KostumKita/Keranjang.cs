@@ -15,6 +15,7 @@ namespace KostumKita
         public Keranjang()
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized;
         }
     }
 }

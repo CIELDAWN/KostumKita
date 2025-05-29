@@ -1,4 +1,4 @@
-using KostumKita.Model;
+﻿using KostumKita.Model;
 
 namespace KostumKita
 {
@@ -8,6 +8,7 @@ namespace KostumKita
         public FormRegister()
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized;
 
         }
 
@@ -38,10 +39,10 @@ namespace KostumKita
                 if (tb_username != null && tb_email != null && dtp_Tanggal_Lahir != null && tb_Password != null)
                 {
                     string username = tb_username.Text;
-                    
+
                     string email = tb_email.Text;
-                    if (!email.EndsWith("@gmail.com", StringComparison.OrdinalIgnoreCase) ||
-                        email.EndsWith("@yahoo.com", StringComparison.OrdinalIgnoreCase))
+                    if (!email.EndsWith("@gmail.com", StringComparison.OrdinalIgnoreCase) &&
+                        !email.EndsWith("@yahoo.com", StringComparison.OrdinalIgnoreCase))
                     {
                         MessageBox.Show("Email harus  memilki @gmail.com atau @yahoo.com", "Validasi Email", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
@@ -111,6 +112,41 @@ namespace KostumKita
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tb_email_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void b_Back_Click(object sender, EventArgs e)
+        {
+            FormLogin back = new FormLogin();
+            back.Show();
+            Hide();
+        }
+
+
+
+        private void b_ShowPassword_Click_1(object sender, EventArgs e)
+        {
+            bool isPasswordHidden = tb_Password.UseSystemPasswordChar;
+            tb_Password.UseSystemPasswordChar = !isPasswordHidden;
+            tb_Password.PasswordChar = isPasswordHidden ? '\0' : '●';
+
+            Image icon = isPasswordHidden ? Properties.Resources.Unlock : Properties.Resources.Lock;
+            b_ShowPassword.BackgroundImage = icon;
+
+        }
+
+        private void b_ConfirmPassword_Click(object sender, EventArgs e)
+        {
+            bool isPasswordHidden1 = tb_ConfirmPassword.UseSystemPasswordChar;
+            tb_ConfirmPassword.UseSystemPasswordChar = !isPasswordHidden1;
+            tb_ConfirmPassword.PasswordChar = isPasswordHidden1 ? '\0' : '●';
+
+            Image icon1 = isPasswordHidden1 ? Properties.Resources.Unlock1 : Properties.Resources.Lock1;
+            b_ConfirmPassword.BackgroundImage = icon1;
         }
     }
 }

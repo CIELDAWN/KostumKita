@@ -10,11 +10,29 @@ using System.Windows.Forms;
 
 namespace KostumKita
 {
-    public partial class ListKostum: Form
+    public partial class ListKostum : Form
     {
         public ListKostum()
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized;
+        }
+
+        private void ListKostum_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void b_Home_Click(object sender, EventArgs e)
+        {
+            HomepageKostumer Home = new HomepageKostumer();
+            Home.Show();
+            Hide();
         }
     }
 }

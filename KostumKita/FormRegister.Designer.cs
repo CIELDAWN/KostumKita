@@ -35,16 +35,19 @@
             tb_email = new TextBox();
             button1 = new Button();
             dtp_Tanggal_Lahir = new DateTimePicker();
-            pictureBox1 = new PictureBox();
             tb_ConfirmPassword = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel1 = new Panel();
+            b_ConfirmPassword = new Button();
+            b_ShowPassword = new Button();
+            b_Back = new Button();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // tb_username
             // 
-            tb_username.Location = new Point(147, 183);
+            tb_username.Location = new Point(311, 303);
             tb_username.Name = "tb_username";
-            tb_username.Size = new Size(190, 23);
+            tb_username.Size = new Size(298, 23);
             tb_username.TabIndex = 1;
             // 
             // npgsqlCommandBuilder1
@@ -54,24 +57,25 @@
             // 
             // tb_Password
             // 
-            tb_Password.Location = new Point(147, 275);
+            tb_Password.Location = new Point(311, 459);
             tb_Password.Name = "tb_Password";
-            tb_Password.Size = new Size(190, 23);
+            tb_Password.Size = new Size(298, 23);
             tb_Password.TabIndex = 6;
             // 
             // tb_email
             // 
-            tb_email.Location = new Point(377, 183);
+            tb_email.Location = new Point(711, 303);
             tb_email.Name = "tb_email";
-            tb_email.Size = new Size(190, 23);
+            tb_email.Size = new Size(295, 23);
             tb_email.TabIndex = 7;
+            tb_email.TextChanged += tb_email_TextChanged;
             // 
             // button1
             // 
             button1.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(231, 314);
+            button1.Location = new Point(452, 518);
             button1.Name = "button1";
-            button1.Size = new Size(239, 23);
+            button1.Size = new Size(368, 23);
             button1.TabIndex = 8;
             button1.Text = "register";
             button1.UseVisualStyleBackColor = true;
@@ -80,48 +84,83 @@
             // dtp_Tanggal_Lahir
             // 
             dtp_Tanggal_Lahir.Font = new Font("Times New Roman", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dtp_Tanggal_Lahir.Location = new Point(256, 230);
+            dtp_Tanggal_Lahir.Location = new Point(489, 381);
             dtp_Tanggal_Lahir.Name = "dtp_Tanggal_Lahir";
-            dtp_Tanggal_Lahir.Size = new Size(190, 20);
+            dtp_Tanggal_Lahir.Size = new Size(303, 20);
             dtp_Tanggal_Lahir.TabIndex = 9;
             dtp_Tanggal_Lahir.ValueChanged += dateTimePicker1_ValueChanged;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(-6, -15);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(737, 489);
-            pictureBox1.TabIndex = 10;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
-            // 
             // tb_ConfirmPassword
             // 
-            tb_ConfirmPassword.Location = new Point(377, 273);
+            tb_ConfirmPassword.Location = new Point(711, 459);
             tb_ConfirmPassword.Name = "tb_ConfirmPassword";
-            tb_ConfirmPassword.Size = new Size(190, 23);
+            tb_ConfirmPassword.Size = new Size(295, 23);
             tb_ConfirmPassword.TabIndex = 11;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.ControlLightLight;
+            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.Controls.Add(b_ConfirmPassword);
+            panel1.Controls.Add(b_ShowPassword);
+            panel1.Controls.Add(b_Back);
+            panel1.Controls.Add(tb_username);
+            panel1.Controls.Add(tb_email);
+            panel1.Controls.Add(tb_Password);
+            panel1.Controls.Add(tb_ConfirmPassword);
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(dtp_Tanggal_Lahir);
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1366, 768);
+            panel1.TabIndex = 12;
+            // 
+            // b_ConfirmPassword
+            // 
+            b_ConfirmPassword.BackgroundImage = Properties.Resources.Lock1;
+            b_ConfirmPassword.BackgroundImageLayout = ImageLayout.Center;
+            b_ConfirmPassword.Location = new Point(976, 450);
+            b_ConfirmPassword.Name = "b_ConfirmPassword";
+            b_ConfirmPassword.Size = new Size(30, 30);
+            b_ConfirmPassword.TabIndex = 14;
+            b_ConfirmPassword.UseVisualStyleBackColor = true;
+            b_ConfirmPassword.Click += b_ConfirmPassword_Click;
+            // 
+            // b_ShowPassword
+            // 
+            b_ShowPassword.BackgroundImage = Properties.Resources.Lock1;
+            b_ShowPassword.BackgroundImageLayout = ImageLayout.Center;
+            b_ShowPassword.Location = new Point(579, 450);
+            b_ShowPassword.Name = "b_ShowPassword";
+            b_ShowPassword.Size = new Size(30, 32);
+            b_ShowPassword.TabIndex = 13;
+            b_ShowPassword.UseVisualStyleBackColor = true;
+            b_ShowPassword.Click += b_ShowPassword_Click_1;
+            // 
+            // b_Back
+            // 
+            b_Back.BackColor = SystemColors.ButtonHighlight;
+            b_Back.BackgroundImage = (Image)resources.GetObject("b_Back.BackgroundImage");
+            b_Back.Location = new Point(12, 90);
+            b_Back.Name = "b_Back";
+            b_Back.Size = new Size(72, 72);
+            b_Back.TabIndex = 12;
+            b_Back.Text = "Back";
+            b_Back.UseVisualStyleBackColor = false;
+            b_Back.Click += b_Back_Click;
             // 
             // FormRegister
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(728, 450);
-            Controls.Add(tb_ConfirmPassword);
-            Controls.Add(dtp_Tanggal_Lahir);
-            Controls.Add(button1);
-            Controls.Add(tb_email);
-            Controls.Add(tb_Password);
-            Controls.Add(tb_username);
-            Controls.Add(pictureBox1);
+            ClientSize = new Size(1350, 729);
+            Controls.Add(panel1);
             Name = "FormRegister";
             Text = "FormRegister";
             Load += FormRegister_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -136,7 +175,10 @@
         private TextBox tb_email;
         private Button button1;
         private DateTimePicker dtp_Tanggal_Lahir;
-        private PictureBox pictureBox1;
         private TextBox tb_ConfirmPassword;
+        private Panel panel1;
+        private Button b_Back;
+        private Button b_ShowPassword;
+        private Button b_ConfirmPassword;
     }
 }

@@ -3,6 +3,7 @@ using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -18,6 +19,8 @@ namespace KostumKita
         public FormLogin()
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -61,6 +64,26 @@ namespace KostumKita
         {
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void b_ShowPassword_Click(object sender, EventArgs e)
+          
+        {
+            bool isPasswordHidden = tb_Password.UseSystemPasswordChar;
+            tb_Password.UseSystemPasswordChar = !isPasswordHidden;
+            tb_Password.PasswordChar = isPasswordHidden ? '\0' : '●';
+
+            Image icon = isPasswordHidden ? Properties.Resources.Unlock : Properties.Resources.Lock;
+            b_ShowPassword.BackgroundImage = icon;
+
+        }
+
+      
+    
     }
 
 }

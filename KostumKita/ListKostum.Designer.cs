@@ -28,18 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListKostum));
+            panel1 = new Panel();
+            b_Home = new Button();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // List_Kostum
+            // panel1
+            // 
+            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.BackgroundImageLayout = ImageLayout.Center;
+            panel1.Controls.Add(b_Home);
+            panel1.Location = new Point(0, 2);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(802, 448);
+            panel1.TabIndex = 0;
+            // 
+            // b_Home
+            // 
+            b_Home.BackColor = Color.Maroon;
+            b_Home.BackgroundImage = (Image)resources.GetObject("b_Home.BackgroundImage");
+            b_Home.BackgroundImageLayout = ImageLayout.Center;
+            b_Home.Location = new Point(218, 3);
+            b_Home.Name = "b_Home";
+            b_Home.Size = new Size(58, 27);
+            b_Home.TabIndex = 0;
+            b_Home.UseVisualStyleBackColor = false;
+            b_Home.Click += b_Home_Click;
+            // 
+            // ListKostum
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Name = "List_Kostum";
+            ClientSize = new Size(1350, 729);
+            Controls.Add(panel1);
+            Name = "ListKostum";
             Text = "ListKostum";
+            Load += ListKostum_Load;
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Panel panel1;
+        private Button b_Home;
     }
 }

@@ -15,6 +15,7 @@ namespace KostumKita
         public HomepageKostumer()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
 
             Panel panelHeader = new Panel();
             panelHeader.Height = 100;
@@ -41,7 +42,7 @@ namespace KostumKita
             //panelHomepage.Controls.Add(konten1);
             //panelHomepage.Controls.Add(konten2);
             //panelHomepage.Controls.Add(konten3);
-  
+
             scrollPanel.Controls.Add(panelHomepage);
 
             this.Controls.Add(scrollPanel);
@@ -51,7 +52,7 @@ namespace KostumKita
 
         private void HomepageKostumer_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void List_Kostum_Click(object sender, EventArgs e)
@@ -85,7 +86,17 @@ namespace KostumKita
 
         private void panel_homepage_Paint(object sender, PaintEventArgs e)
         {
-            
+
+        }
+
+        private void b_Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -34,6 +34,7 @@
             Transaksi = new Button();
             ExploreKostum = new Button();
             panel_homepage = new Panel();
+            b_Exit = new Button();
             panel_homepage.SuspendLayout();
             SuspendLayout();
             // 
@@ -91,28 +92,43 @@
             // 
             // panel_homepage
             // 
+            panel_homepage.AutoSize = true;
             panel_homepage.BackgroundImage = (Image)resources.GetObject("panel_homepage.BackgroundImage");
+            panel_homepage.BackgroundImageLayout = ImageLayout.None;
+            panel_homepage.Controls.Add(b_Exit);
             panel_homepage.Controls.Add(ExploreKostum);
             panel_homepage.Controls.Add(Transaksi);
             panel_homepage.Controls.Add(keranjang);
             panel_homepage.Controls.Add(List_Kostum);
-            panel_homepage.Location = new Point(2, -1);
+            panel_homepage.Dock = DockStyle.Fill;
+            panel_homepage.Location = new Point(0, 0);
             panel_homepage.Name = "panel_homepage";
-            panel_homepage.Size = new Size(782, 747);
+            panel_homepage.Size = new Size(1350, 729);
             panel_homepage.TabIndex = 5;
             panel_homepage.Paint += panel_homepage_Paint;
+            // 
+            // b_Exit
+            // 
+            b_Exit.BackgroundImage = (Image)resources.GetObject("b_Exit.BackgroundImage");
+            b_Exit.Location = new Point(738, 61);
+            b_Exit.Name = "b_Exit";
+            b_Exit.Size = new Size(35, 32);
+            b_Exit.TabIndex = 5;
+            b_Exit.UseVisualStyleBackColor = true;
+            b_Exit.Click += button1_Click;
             // 
             // HomepageKostumer
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(783, 749);
+            ClientSize = new Size(1350, 729);
             Controls.Add(panel_homepage);
             Name = "HomepageKostumer";
             Text = "HomepageKostumer";
             panel_homepage.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -122,5 +138,6 @@
         private Button Transaksi;
         private Button ExploreKostum;
         private Panel panel_homepage;
+        private Button b_Exit;
     }
 }
