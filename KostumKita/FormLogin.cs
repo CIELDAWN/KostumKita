@@ -71,7 +71,7 @@ namespace KostumKita
         }
 
         private void b_ShowPassword_Click(object sender, EventArgs e)
-          
+
         {
             bool isPasswordHidden = tb_Password.UseSystemPasswordChar;
             tb_Password.UseSystemPasswordChar = !isPasswordHidden;
@@ -82,8 +82,15 @@ namespace KostumKita
 
         }
 
-      
-    
+        private void tb_Username_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb_Password_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

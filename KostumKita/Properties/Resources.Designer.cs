@@ -123,6 +123,86 @@ namespace KostumKita.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Homepage_Kostumer_fix {
+            get {
+                object obj = ResourceManager.GetObject("Homepage Kostumer fix", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Homepage_Kostumer1 {
+            get {
+                object obj = ResourceManager.GetObject("Homepage Kostumer1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Homepage_Kostumer2 {
+            get {
+                object obj = ResourceManager.GetObject("Homepage Kostumer2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Homepage_Kostumerbissmillah {
+            get {
+                object obj = ResourceManager.GetObject("Homepage Kostumerbissmillah", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Homepage_KostumerOYY {
+            get {
+                object obj = ResourceManager.GetObject("Homepage KostumerOYY", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap List_Kostum_Entertaiment {
+            get {
+                object obj = ResourceManager.GetObject("List Kostum Entertaiment", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap List_Kostum_Tradisional {
+            get {
+                object obj = ResourceManager.GetObject("List Kostum Tradisional", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap List_Kostum_Tradisional1 {
+            get {
+                object obj = ResourceManager.GetObject("List Kostum Tradisional1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Lock {
             get {
                 object obj = ResourceManager.GetObject("Lock", resourceCulture);
@@ -153,6 +233,46 @@ namespace KostumKita.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Log_in_FIX {
+            get {
+                object obj = ResourceManager.GetObject("Log in FIX", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Log_in_FIX1 {
+            get {
+                object obj = ResourceManager.GetObject("Log in FIX1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Log_in_FIX2 {
+            get {
+                object obj = ResourceManager.GetObject("Log in FIX2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Log_in_FIX3 {
+            get {
+                object obj = ResourceManager.GetObject("Log in FIX3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Screenshot_2025_05_28_092900 {
             get {
                 object obj = ResourceManager.GetObject("Screenshot 2025-05-28 092900", resourceCulture);
@@ -176,6 +296,46 @@ namespace KostumKita.Properties {
         internal static System.Drawing.Bitmap Screenshot_2025_05_28_094540 {
             get {
                 object obj = ResourceManager.GetObject("Screenshot 2025-05-28 094540", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2025_05_30_021749 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2025-05-30 021749", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2025_05_30_145404 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2025-05-30 145404", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2025_05_30_145933 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2025-05-30 145933", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SMEOGA_BNAR {
+            get {
+                object obj = ResourceManager.GetObject("SMEOGA BNAR", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

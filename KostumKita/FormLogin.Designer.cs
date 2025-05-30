@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             tb_Username = new TextBox();
             tb_Password = new TextBox();
             button1 = new Button();
@@ -40,22 +39,26 @@
             // 
             // tb_Username
             // 
-            tb_Username.Location = new Point(511, 335);
+            tb_Username.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            tb_Username.Location = new Point(502, 337);
             tb_Username.Name = "tb_Username";
-            tb_Username.Size = new Size(317, 23);
+            tb_Username.Size = new Size(336, 23);
             tb_Username.TabIndex = 1;
+            tb_Username.TextChanged += tb_Username_TextChanged;
             // 
             // tb_Password
             // 
-            tb_Password.Location = new Point(511, 407);
+            tb_Password.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            tb_Password.Location = new Point(502, 407);
             tb_Password.Name = "tb_Password";
-            tb_Password.Size = new Size(317, 23);
+            tb_Password.Size = new Size(336, 25);
             tb_Password.TabIndex = 3;
+            tb_Password.TextChanged += tb_Password_TextChanged;
             // 
             // button1
             // 
             button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(483, 479);
+            button1.Location = new Point(481, 479);
             button1.Name = "button1";
             button1.Size = new Size(403, 39);
             button1.TabIndex = 4;
@@ -67,11 +70,11 @@
             // 
             linkLabel1.AutoSize = true;
             linkLabel1.BackColor = Color.Maroon;
-            linkLabel1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            linkLabel1.Font = new Font("Britannic Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             linkLabel1.LinkColor = Color.White;
-            linkLabel1.Location = new Point(672, 537);
+            linkLabel1.Location = new Point(722, 535);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(49, 15);
+            linkLabel1.Size = new Size(60, 16);
             linkLabel1.TabIndex = 5;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Register";
@@ -79,17 +82,16 @@
             // 
             // panel1
             // 
-            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
-            panel1.BackgroundImageLayout = ImageLayout.None;
+            panel1.BackgroundImage = Properties.Resources.Log_in_FIX3;
+            panel1.BackgroundImageLayout = ImageLayout.Zoom;
             panel1.Controls.Add(b_ShowPassword);
             panel1.Controls.Add(linkLabel1);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(tb_Password);
             panel1.Controls.Add(tb_Username);
-            panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1350, 729);
+            panel1.Size = new Size(1366, 768);
             panel1.TabIndex = 6;
             panel1.Paint += panel1_Paint;
             // 
@@ -97,9 +99,9 @@
             // 
             b_ShowPassword.BackgroundImage = Properties.Resources.Lock1;
             b_ShowPassword.BackgroundImageLayout = ImageLayout.Center;
-            b_ShowPassword.Location = new Point(798, 400);
+            b_ShowPassword.Location = new Point(809, 408);
             b_ShowPassword.Name = "b_ShowPassword";
-            b_ShowPassword.Size = new Size(30, 30);
+            b_ShowPassword.Size = new Size(29, 24);
             b_ShowPassword.TabIndex = 6;
             b_ShowPassword.UseVisualStyleBackColor = true;
             b_ShowPassword.Click += b_ShowPassword_Click;

@@ -29,93 +29,153 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomepageKostumer));
-            List_Kostum = new Button();
+            KostumEntertainment = new Button();
             keranjang = new Button();
             Transaksi = new Button();
             ExploreKostum = new Button();
-            panel_homepage = new Panel();
             b_Exit = new Button();
-            panel_homepage.SuspendLayout();
+            panel1 = new Panel();
+            Live = new Button();
+            Home = new Button();
+            KostumTradisional = new Button();
+            pictureBox1 = new PictureBox();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // List_Kostum
+            // KostumEntertainment
             // 
-            List_Kostum.BackColor = Color.FromArgb(192, 0, 0);
-            List_Kostum.BackgroundImage = (Image)resources.GetObject("List_Kostum.BackgroundImage");
-            List_Kostum.BackgroundImageLayout = ImageLayout.Zoom;
-            List_Kostum.Font = new Font("Britannic Bold", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            List_Kostum.ForeColor = Color.Maroon;
-            List_Kostum.Location = new Point(190, 14);
-            List_Kostum.Name = "List_Kostum";
-            List_Kostum.Size = new Size(55, 24);
-            List_Kostum.TabIndex = 1;
-            List_Kostum.TextImageRelation = TextImageRelation.ImageBeforeText;
-            List_Kostum.UseVisualStyleBackColor = false;
-            List_Kostum.Click += List_Kostum_Click;
+            KostumEntertainment.BackColor = Color.LightCoral;
+            KostumEntertainment.BackgroundImageLayout = ImageLayout.Zoom;
+            KostumEntertainment.Font = new Font("Britannic Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            KostumEntertainment.ForeColor = Color.White;
+            KostumEntertainment.Location = new Point(72, 325);
+            KostumEntertainment.Name = "KostumEntertainment";
+            KostumEntertainment.Size = new Size(152, 31);
+            KostumEntertainment.TabIndex = 1;
+            KostumEntertainment.Text = "KOSTUM ENTERTAINMENT";
+            KostumEntertainment.TextImageRelation = TextImageRelation.ImageBeforeText;
+            KostumEntertainment.UseVisualStyleBackColor = false;
+            KostumEntertainment.Click += List_Kostum_Click;
             // 
             // keranjang
             // 
-            keranjang.BackColor = SystemColors.ControlLightLight;
-            keranjang.BackgroundImage = (Image)resources.GetObject("keranjang.BackgroundImage");
+            keranjang.BackColor = Color.LightCoral;
             keranjang.BackgroundImageLayout = ImageLayout.Zoom;
+            keranjang.Font = new Font("Britannic Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             keranjang.ForeColor = SystemColors.ControlLightLight;
-            keranjang.Location = new Point(285, 14);
+            keranjang.Location = new Point(72, 599);
             keranjang.Name = "keranjang";
-            keranjang.Size = new Size(57, 24);
+            keranjang.Size = new Size(152, 30);
             keranjang.TabIndex = 2;
+            keranjang.Text = "KERANJANG";
             keranjang.UseVisualStyleBackColor = false;
             keranjang.Click += keranjang_Click;
             // 
             // Transaksi
             // 
-            Transaksi.BackgroundImage = Properties.Resources.Screenshot_2025_05_28_094540;
+            Transaksi.BackColor = Color.LightCoral;
             Transaksi.BackgroundImageLayout = ImageLayout.Zoom;
-            Transaksi.Location = new Point(382, 14);
+            Transaksi.Font = new Font("Britannic Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Transaksi.ForeColor = SystemColors.ButtonHighlight;
+            Transaksi.Location = new Point(72, 506);
             Transaksi.Name = "Transaksi";
-            Transaksi.Size = new Size(53, 24);
+            Transaksi.Size = new Size(152, 31);
             Transaksi.TabIndex = 3;
-            Transaksi.UseVisualStyleBackColor = true;
+            Transaksi.Text = "TRANSAKSI";
+            Transaksi.UseVisualStyleBackColor = false;
             Transaksi.Click += Transaksi_Click;
             // 
             // ExploreKostum
             // 
-            ExploreKostum.BackColor = Color.Maroon;
-            ExploreKostum.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ExploreKostum.BackColor = Color.LightCoral;
+            ExploreKostum.Font = new Font("Britannic Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ExploreKostum.ForeColor = SystemColors.ControlLightLight;
-            ExploreKostum.Location = new Point(11, 609);
+            ExploreKostum.Location = new Point(701, 616);
             ExploreKostum.Name = "ExploreKostum";
-            ExploreKostum.Size = new Size(154, 31);
+            ExploreKostum.Size = new Size(267, 47);
             ExploreKostum.TabIndex = 4;
-            ExploreKostum.Text = "Explore Kostum";
+            ExploreKostum.Text = "EXPLORE KOSTUM";
             ExploreKostum.UseVisualStyleBackColor = false;
             ExploreKostum.Click += ExploreKostum_Click;
-            // 
-            // panel_homepage
-            // 
-            panel_homepage.AutoSize = true;
-            panel_homepage.BackgroundImage = (Image)resources.GetObject("panel_homepage.BackgroundImage");
-            panel_homepage.BackgroundImageLayout = ImageLayout.None;
-            panel_homepage.Controls.Add(b_Exit);
-            panel_homepage.Controls.Add(ExploreKostum);
-            panel_homepage.Controls.Add(Transaksi);
-            panel_homepage.Controls.Add(keranjang);
-            panel_homepage.Controls.Add(List_Kostum);
-            panel_homepage.Dock = DockStyle.Fill;
-            panel_homepage.Location = new Point(0, 0);
-            panel_homepage.Name = "panel_homepage";
-            panel_homepage.Size = new Size(1350, 729);
-            panel_homepage.TabIndex = 5;
-            panel_homepage.Paint += panel_homepage_Paint;
             // 
             // b_Exit
             // 
             b_Exit.BackgroundImage = (Image)resources.GetObject("b_Exit.BackgroundImage");
-            b_Exit.Location = new Point(738, 61);
+            b_Exit.Location = new Point(1311, 26);
             b_Exit.Name = "b_Exit";
-            b_Exit.Size = new Size(35, 32);
+            b_Exit.Size = new Size(30, 36);
             b_Exit.TabIndex = 5;
             b_Exit.UseVisualStyleBackColor = true;
             b_Exit.Click += button1_Click;
+            // 
+            // panel1
+            // 
+            panel1.BackgroundImage = Properties.Resources.SMEOGA_BNAR;
+            panel1.BackgroundImageLayout = ImageLayout.Zoom;
+            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(Live);
+            panel1.Controls.Add(Home);
+            panel1.Controls.Add(KostumTradisional);
+            panel1.Controls.Add(b_Exit);
+            panel1.Controls.Add(ExploreKostum);
+            panel1.Controls.Add(KostumEntertainment);
+            panel1.Controls.Add(keranjang);
+            panel1.Controls.Add(Transaksi);
+            panel1.Location = new Point(0, 1);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1366, 768);
+            panel1.TabIndex = 6;
+            panel1.Paint += panel1_Paint;
+            // 
+            // Live
+            // 
+            Live.BackColor = Color.LightCoral;
+            Live.Font = new Font("Britannic Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Live.ForeColor = Color.White;
+            Live.Location = new Point(72, 416);
+            Live.Name = "Live";
+            Live.Size = new Size(152, 33);
+            Live.TabIndex = 8;
+            Live.Text = "LIVE";
+            Live.UseVisualStyleBackColor = false;
+            Live.Click += Live_Click;
+            // 
+            // Home
+            // 
+            Home.BackColor = Color.LightCoral;
+            Home.Font = new Font("Britannic Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Home.ForeColor = Color.White;
+            Home.Location = new Point(72, 146);
+            Home.Name = "Home";
+            Home.Size = new Size(152, 31);
+            Home.TabIndex = 7;
+            Home.Text = "HOME";
+            Home.UseVisualStyleBackColor = false;
+            Home.Click += Home_Click;
+            // 
+            // KostumTradisional
+            // 
+            KostumTradisional.BackColor = Color.LightCoral;
+            KostumTradisional.Font = new Font("Britannic Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            KostumTradisional.ForeColor = Color.White;
+            KostumTradisional.Location = new Point(72, 237);
+            KostumTradisional.Name = "KostumTradisional";
+            KostumTradisional.Size = new Size(152, 30);
+            KostumTradisional.TabIndex = 6;
+            KostumTradisional.Text = "KOSTUM TRADISIONAL";
+            KostumTradisional.UseVisualStyleBackColor = false;
+            KostumTradisional.Click += button1_Click_1;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = Properties.Resources.Screenshot_2025_05_30_145933;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox1.Location = new Point(1176, 25);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(122, 38);
+            pictureBox1.TabIndex = 9;
+            pictureBox1.TabStop = false;
             // 
             // HomepageKostumer
             // 
@@ -123,21 +183,25 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(1350, 729);
-            Controls.Add(panel_homepage);
+            Controls.Add(panel1);
             Name = "HomepageKostumer";
             Text = "HomepageKostumer";
-            panel_homepage.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Button List_Kostum;
+        private Button KostumEntertainment;
         private Button keranjang;
         private Button Transaksi;
         private Button ExploreKostum;
-        private Panel panel_homepage;
         private Button b_Exit;
+        private Panel panel1;
+        private Button KostumTradisional;
+        private Button Home;
+        private Button Live;
+        private PictureBox pictureBox1;
     }
 }

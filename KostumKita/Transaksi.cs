@@ -10,12 +10,20 @@ using System.Windows.Forms;
 
 namespace KostumKita
 {
-    public partial class Transaksi: Form
+    public partial class Transaksi : Form
     {
         public Transaksi()
         {
             InitializeComponent();
             WindowState = FormWindowState.Maximized;
+        }
+
+        private void Home5_Click(object sender, EventArgs e)
+        {
+            HomepageKostumer homepageKostumerForm = new HomepageKostumer();
+            homepageKostumerForm.WindowState = FormWindowState.Maximized;
+            homepageKostumerForm.Show();
+            this.Hide();
         }
     }
 }
