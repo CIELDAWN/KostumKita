@@ -10,5 +10,8 @@ namespace KostumKita.Model
     {
         public string username { get; set; }
         public string password { get; set; }
+        
+        string adminUsername = "admin";
+        string adminPasswrod = "admin123";
     }
 }

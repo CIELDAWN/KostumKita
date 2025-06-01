@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using KostumKita;
+using KostumKita.Model;
 
 namespace KostumKita
 {
@@ -15,6 +18,23 @@ namespace KostumKita
         public KostumEntertainment()
         {
             InitializeComponent();
+        }
+
+        private void HandleKlikKostum(string namaKostum)
+        {
+            DialogResult result = MessageBox.Show(
+                $"Apakah Anda ingin membeli atau menyewa {namaKostum}?",
+                "Pilihan Transaksi",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button1);
+
+            string aksi = (result == DialogResult.Yes) ? "membeli" : "menyewa";
+
+            KeranjangContext keranjang = new KeranjangContext();
+            keranjang.TambahKeranjang(namaKostum, aksi);
+
+            MessageBox.Show($"{namaKostum} berhasil ditambahkan ke keranjang untuk {aksi.ToLower()}!", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void Home_Click(object sender, EventArgs e)
@@ -71,6 +91,11 @@ namespace KostumKita
             transaksiForm.WindowState = FormWindowState.Maximized;
             transaksiForm.Show();
             this.Hide();
+        }
+
+        private void btnSailorMoon_Click(object sender, EventArgs e)
+        {
+            HandleKlikKostum("Costume Sailor Moon");
         }
     }
 }

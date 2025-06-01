@@ -35,10 +35,10 @@
             ExploreKostum = new Button();
             b_Exit = new Button();
             panel1 = new Panel();
+            pictureBox1 = new PictureBox();
             Live = new Button();
             Home = new Button();
             KostumTradisional = new Button();
-            pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -64,7 +64,7 @@
             keranjang.BackgroundImageLayout = ImageLayout.Zoom;
             keranjang.Font = new Font("Britannic Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             keranjang.ForeColor = SystemColors.ControlLightLight;
-            keranjang.Location = new Point(72, 599);
+            keranjang.Location = new Point(72, 507);
             keranjang.Name = "keranjang";
             keranjang.Size = new Size(152, 30);
             keranjang.TabIndex = 2;
@@ -78,7 +78,7 @@
             Transaksi.BackgroundImageLayout = ImageLayout.Zoom;
             Transaksi.Font = new Font("Britannic Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Transaksi.ForeColor = SystemColors.ButtonHighlight;
-            Transaksi.Location = new Point(72, 506);
+            Transaksi.Location = new Point(72, 600);
             Transaksi.Name = "Transaksi";
             Transaksi.Size = new Size(152, 31);
             Transaksi.TabIndex = 3;
@@ -128,6 +128,16 @@
             panel1.TabIndex = 6;
             panel1.Paint += panel1_Paint;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = Properties.Resources.Screenshot_2025_05_30_145933;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox1.Location = new Point(1176, 25);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(122, 38);
+            pictureBox1.TabIndex = 9;
+            pictureBox1.TabStop = false;
+            // 
             // Live
             // 
             Live.BackColor = Color.LightCoral;
@@ -166,16 +176,6 @@
             KostumTradisional.Text = "KOSTUM TRADISIONAL";
             KostumTradisional.UseVisualStyleBackColor = false;
             KostumTradisional.Click += button1_Click_1;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackgroundImage = Properties.Resources.Screenshot_2025_05_30_145933;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(1176, 25);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(122, 38);
-            pictureBox1.TabIndex = 9;
-            pictureBox1.TabStop = false;
             // 
             // HomepageKostumer
             // 

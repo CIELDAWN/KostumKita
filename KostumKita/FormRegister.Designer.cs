@@ -45,7 +45,7 @@
             // 
             // tb_username
             // 
-            tb_username.Location = new Point(311, 303);
+            tb_username.Location = new Point(311, 306);
             tb_username.Name = "tb_username";
             tb_username.Size = new Size(298, 23);
             tb_username.TabIndex = 1;
@@ -57,14 +57,14 @@
             // 
             // tb_Password
             // 
-            tb_Password.Location = new Point(311, 459);
+            tb_Password.Location = new Point(311, 454);
             tb_Password.Name = "tb_Password";
             tb_Password.Size = new Size(298, 23);
             tb_Password.TabIndex = 6;
             // 
             // tb_email
             // 
-            tb_email.Location = new Point(711, 303);
+            tb_email.Location = new Point(711, 306);
             tb_email.Name = "tb_email";
             tb_email.Size = new Size(295, 23);
             tb_email.TabIndex = 7;
@@ -73,9 +73,9 @@
             // button1
             // 
             button1.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(452, 518);
+            button1.Location = new Point(440, 513);
             button1.Name = "button1";
-            button1.Size = new Size(368, 23);
+            button1.Size = new Size(395, 37);
             button1.TabIndex = 8;
             button1.Text = "register";
             button1.UseVisualStyleBackColor = true;
@@ -84,7 +84,7 @@
             // dtp_Tanggal_Lahir
             // 
             dtp_Tanggal_Lahir.Font = new Font("Times New Roman", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dtp_Tanggal_Lahir.Location = new Point(489, 381);
+            dtp_Tanggal_Lahir.Location = new Point(485, 381);
             dtp_Tanggal_Lahir.Name = "dtp_Tanggal_Lahir";
             dtp_Tanggal_Lahir.Size = new Size(303, 20);
             dtp_Tanggal_Lahir.TabIndex = 9;
@@ -92,7 +92,7 @@
             // 
             // tb_ConfirmPassword
             // 
-            tb_ConfirmPassword.Location = new Point(711, 459);
+            tb_ConfirmPassword.Location = new Point(711, 452);
             tb_ConfirmPassword.Name = "tb_ConfirmPassword";
             tb_ConfirmPassword.Size = new Size(295, 23);
             tb_ConfirmPassword.TabIndex = 11;
@@ -119,7 +119,7 @@
             // 
             b_ConfirmPassword.BackgroundImage = Properties.Resources.Lock1;
             b_ConfirmPassword.BackgroundImageLayout = ImageLayout.Center;
-            b_ConfirmPassword.Location = new Point(976, 450);
+            b_ConfirmPassword.Location = new Point(979, 448);
             b_ConfirmPassword.Name = "b_ConfirmPassword";
             b_ConfirmPassword.Size = new Size(30, 30);
             b_ConfirmPassword.TabIndex = 14;
@@ -130,7 +130,7 @@
             // 
             b_ShowPassword.BackgroundImage = Properties.Resources.Lock1;
             b_ShowPassword.BackgroundImageLayout = ImageLayout.Center;
-            b_ShowPassword.Location = new Point(579, 450);
+            b_ShowPassword.Location = new Point(580, 449);
             b_ShowPassword.Name = "b_ShowPassword";
             b_ShowPassword.Size = new Size(30, 32);
             b_ShowPassword.TabIndex = 13;

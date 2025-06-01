@@ -1,6 +1,6 @@
 ﻿namespace KostumKita
 {
-    partial class Keranjang
+    partial class ManageCostume
     {
         /// <summary>
         /// Required designer variable.
@@ -19,6 +19,7 @@
             }
             base.Dispose(disposing);
         }
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -27,35 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Home3 = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageCostume));
+            panel1 = new Panel();
             SuspendLayout();
             // 
-            // Home3
+            // panel1
             // 
-            Home3.BackColor = Color.LightCoral;
-            Home3.Font = new Font("Britannic Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Home3.ForeColor = Color.White;
-            Home3.Location = new Point(25, 12);
-            Home3.Name = "Home3";
-            Home3.Size = new Size(104, 24);
-            Home3.TabIndex = 0;
-            Home3.Text = "HOME";
-            Home3.UseVisualStyleBackColor = false;
-            Home3.Click += Home3_Click;
+            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.BackgroundImageLayout = ImageLayout.Zoom;
+            panel1.Location = new Point(3, 1);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1366, 768);
+            panel1.TabIndex = 0;
             // 
-            // Keranjang
+            // ManageCostume
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1350, 729);
-            Controls.Add(Home3);
-            Name = "Keranjang";
-            Text = "Keranjang";
+            Controls.Add(panel1);
+            Name = "ManageCostume";
+            Text = "ManageCostume";
+            Load += ManageCostume_Load;
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button Home3;
+        private Panel panel1;
     }
 }

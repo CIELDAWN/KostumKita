@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,13 +13,13 @@ namespace KostumKita.Model
         private readonly string connStr;
         public LoginContext()
         {
-            connStr = "Host = localhost; Username = postgres; Password = Sinta2074; Database = KostumKita";
+            connStr = "Host = localhost; Username = postgres; Password = blackclover1; Database = KostumKita";
         }
 
         public bool Validate(string username,string password, out int user_ID)
         {
             user_ID = 0;
-            string query = "SELECT user_ID, username FROM list_user WHERE username = @username AND password=@password";
+            string query = "SELECT user_ID, username FROM user_lists WHERE username = @username AND password=@password";
             using (NpgsqlConnection conn = new NpgsqlConnection(connStr))
             {
                 try

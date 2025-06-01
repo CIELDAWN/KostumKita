@@ -13,11 +13,11 @@ namespace KostumKita.Model
         private readonly string connStr;
         public RegisterContext()
         {
-            connStr = "Host=localhost;Username=postgres;password=Sinta2074;Database=KostumKita;";
+            connStr = "Host=localhost;Username=postgres;password=blackclover1;Database=KostumKita;";
         }
         public bool Register(string username, DateTime tanggal_lahir, string email, string password)
         {
-            string query_select = "SELECT * FROM list_user WHERE username = @username";
+            string query_select = "SELECT * FROM user_lists WHERE username = @username";
             using (NpgsqlConnection conn = new NpgsqlConnection(connStr))
             {
                 conn.Open();
@@ -35,7 +35,7 @@ namespace KostumKita.Model
 
             }
 
-            string query_insert = "INSERT INTO list_user(username,email,tanggal_lahir,password) VALUES(@username,@email,@tanggal_lahir,@password)";
+            string query_insert = "INSERT INTO user_lists(username,email,tanggal_lahir,password) VALUES(@username,@email,@tanggal_lahir,@password)";
             using (NpgsqlConnection conn = new NpgsqlConnection(connStr))
             {
                 conn.Open();

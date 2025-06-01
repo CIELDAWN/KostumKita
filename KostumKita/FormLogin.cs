@@ -31,6 +31,16 @@ namespace KostumKita
                 {
                     string username = tb_Username.Text;
                     string password = tb_Password.Text;
+
+                    if (username == "admin" && password == "admin123")
+                    {
+                        MessageBox.Show("Login Sukses. Klik untuk Melanjutkan Halaman", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        HomepageAdmin homepage = new HomepageAdmin();
+                        homepage.Show();
+                        this.Hide();
+                        return;
+                    }
+
                     bool valid = login.Validate(username, password, out int User_ID);
                     {
                         if (valid)

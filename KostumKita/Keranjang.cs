@@ -12,11 +12,6 @@ namespace KostumKita
 {
     public partial class Keranjang : Form
     {
-        public Keranjang()
-        {
-            InitializeComponent();
-            WindowState = FormWindowState.Maximized;
-        }
 
         private void Home3_Click(object sender, EventArgs e)
         {
@@ -25,5 +20,11 @@ namespace KostumKita
             homepageKostumerForm.Show();
             this.Hide();
         }
+    }
+
+    public class ItemKeranjang
+    {
+        public string NamaKostum { get; set; }
+        public string JenisTransaksi { get; set; }
     }
 }
