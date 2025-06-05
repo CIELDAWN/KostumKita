@@ -330,7 +330,6 @@
         private Button keranjang2;
         private Button Transaksi2;
         private Panel panel1;
-        private Button btnSailorMoon;
         private Button btnAlmaMHW;
         private Button btnBakugo;
         private Button btnVioletEvergarden;
@@ -342,5 +341,6 @@
         private Button btnYaeMiko;
         private Button btnKibutsujiMuzan;
         private Button btnMikasaFinalPart;
+        private Button btnSailorMoon;
     }
 }

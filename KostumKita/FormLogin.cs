@@ -87,8 +87,9 @@ namespace KostumKita
             tb_Password.UseSystemPasswordChar = !isPasswordHidden;
             tb_Password.PasswordChar = isPasswordHidden ? '\0' : '●';
 
-            Image icon = isPasswordHidden ? Properties.Resources.Unlock : Properties.Resources.Lock;
+            Image icon = isPasswordHidden ? Properties.Resources.Lock : Properties.Resources.Unlock;
             b_ShowPassword.BackgroundImage = icon;
+
 
         }
 

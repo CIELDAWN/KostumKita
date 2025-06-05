@@ -102,6 +102,7 @@
             // b_Exit
             // 
             b_Exit.BackgroundImage = (Image)resources.GetObject("b_Exit.BackgroundImage");
+            b_Exit.BackgroundImageLayout = ImageLayout.Center;
             b_Exit.Location = new Point(1311, 26);
             b_Exit.Name = "b_Exit";
             b_Exit.Size = new Size(30, 36);

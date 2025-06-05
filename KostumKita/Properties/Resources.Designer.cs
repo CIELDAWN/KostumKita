@@ -103,6 +103,16 @@ namespace KostumKita.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Group_472 {
+            get {
+                object obj = ResourceManager.GetObject("Group 472", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Homepage_Kostumer {
             get {
                 object obj = ResourceManager.GetObject("Homepage Kostumer", resourceCulture);
@@ -266,6 +276,26 @@ namespace KostumKita.Properties {
         internal static System.Drawing.Bitmap Log_in_FIX3 {
             get {
                 object obj = ResourceManager.GetObject("Log in FIX3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap power_off_1 {
+            get {
+                object obj = ResourceManager.GetObject("power-off 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap power_off_11 {
+            get {
+                object obj = ResourceManager.GetObject("power-off 11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -7,13 +7,13 @@ using Npgsql;
 
 namespace KostumKita.Model
 {
-    public class KeranjangContext
+    internal class KeranjangContext
     {
         private readonly NpgsqlConnection conn;
 
         public KeranjangContext()
         {
-            conn = new NpgsqlConnection("Host=localhost;Port=5432;Username=postgres;Password=blackclover1;Database=KostumKita");
+            conn = new NpgsqlConnection("Host=localhost;Port=5432;Username=postgres;Password=stanley;Database=KostumKita");
         }
 
         public void OpenConnection()

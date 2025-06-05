@@ -37,5 +37,17 @@ namespace KostumKita
             manageCostume.Show();
             this.Hide();
         }
+
+        private void b_exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnManageCostume_Click(object sender, EventArgs e)
+        {
+            ManageCostume manage = new ManageCostume();
+            Hide();
+            manage.Show();
+        }
     }
 }

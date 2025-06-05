@@ -30,10 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomepageAdmin));
             panel1 = new Panel();
-            HomeAdmin = new Button();
-            btnManageCostume = new Button();
-            btnPembelianDanPenyewaan = new Button();
+            b_exit = new Button();
             btnManageTransaksi = new Button();
+            btnPembelianDanPenyewaan = new Button();
+            btnManageCostume = new Button();
+            HomeAdmin = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -41,6 +42,7 @@
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.BackgroundImageLayout = ImageLayout.Zoom;
+            panel1.Controls.Add(b_exit);
             panel1.Controls.Add(btnManageTransaksi);
             panel1.Controls.Add(btnPembelianDanPenyewaan);
             panel1.Controls.Add(btnManageCostume);
@@ -50,41 +52,16 @@
             panel1.Size = new Size(1366, 768);
             panel1.TabIndex = 0;
             // 
-            // HomeAdmin
+            // b_exit
             // 
-            HomeAdmin.BackColor = Color.LightCoral;
-            HomeAdmin.Font = new Font("Britannic Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            HomeAdmin.ForeColor = Color.White;
-            HomeAdmin.Location = new Point(75, 142);
-            HomeAdmin.Name = "HomeAdmin";
-            HomeAdmin.Size = new Size(153, 34);
-            HomeAdmin.TabIndex = 2;
-            HomeAdmin.Text = "HOME";
-            HomeAdmin.UseVisualStyleBackColor = false;
-            // 
-            // btnManageCostume
-            // 
-            btnManageCostume.BackColor = Color.LightCoral;
-            btnManageCostume.Font = new Font("Britannic Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnManageCostume.ForeColor = Color.White;
-            btnManageCostume.Location = new Point(75, 231);
-            btnManageCostume.Name = "btnManageCostume";
-            btnManageCostume.Size = new Size(153, 34);
-            btnManageCostume.TabIndex = 3;
-            btnManageCostume.Text = "MANAGE COSTUME";
-            btnManageCostume.UseVisualStyleBackColor = false;
-            // 
-            // btnPembelianDanPenyewaan
-            // 
-            btnPembelianDanPenyewaan.BackColor = Color.LightCoral;
-            btnPembelianDanPenyewaan.Font = new Font("Britannic Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnPembelianDanPenyewaan.ForeColor = Color.White;
-            btnPembelianDanPenyewaan.Location = new Point(75, 317);
-            btnPembelianDanPenyewaan.Name = "btnPembelianDanPenyewaan";
-            btnPembelianDanPenyewaan.Size = new Size(153, 44);
-            btnPembelianDanPenyewaan.TabIndex = 4;
-            btnPembelianDanPenyewaan.Text = "MANAGE PEMBELIAN DAN PENYEWAAN";
-            btnPembelianDanPenyewaan.UseVisualStyleBackColor = false;
+            b_exit.BackgroundImage = Properties.Resources.power_off_1;
+            b_exit.BackgroundImageLayout = ImageLayout.Zoom;
+            b_exit.Location = new Point(1301, 33);
+            b_exit.Name = "b_exit";
+            b_exit.Size = new Size(36, 36);
+            b_exit.TabIndex = 6;
+            b_exit.UseVisualStyleBackColor = true;
+            b_exit.Click += b_exit_Click;
             // 
             // btnManageTransaksi
             // 
@@ -98,6 +75,43 @@
             btnManageTransaksi.Text = "MANAGE TRANSAKSI";
             btnManageTransaksi.UseCompatibleTextRendering = true;
             btnManageTransaksi.UseVisualStyleBackColor = false;
+            // 
+            // btnPembelianDanPenyewaan
+            // 
+            btnPembelianDanPenyewaan.BackColor = Color.LightCoral;
+            btnPembelianDanPenyewaan.Font = new Font("Britannic Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnPembelianDanPenyewaan.ForeColor = Color.White;
+            btnPembelianDanPenyewaan.Location = new Point(75, 317);
+            btnPembelianDanPenyewaan.Name = "btnPembelianDanPenyewaan";
+            btnPembelianDanPenyewaan.Size = new Size(153, 44);
+            btnPembelianDanPenyewaan.TabIndex = 4;
+            btnPembelianDanPenyewaan.Text = "MANAGE PEMBELIAN DAN PENYEWAAN";
+            btnPembelianDanPenyewaan.UseVisualStyleBackColor = false;
+            // 
+            // btnManageCostume
+            // 
+            btnManageCostume.BackColor = Color.LightCoral;
+            btnManageCostume.Font = new Font("Britannic Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnManageCostume.ForeColor = Color.White;
+            btnManageCostume.Location = new Point(75, 231);
+            btnManageCostume.Name = "btnManageCostume";
+            btnManageCostume.Size = new Size(153, 34);
+            btnManageCostume.TabIndex = 3;
+            btnManageCostume.Text = "MANAGE COSTUME";
+            btnManageCostume.UseVisualStyleBackColor = false;
+            btnManageCostume.Click += btnManageCostume_Click;
+            // 
+            // HomeAdmin
+            // 
+            HomeAdmin.BackColor = Color.LightCoral;
+            HomeAdmin.Font = new Font("Britannic Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            HomeAdmin.ForeColor = Color.White;
+            HomeAdmin.Location = new Point(75, 142);
+            HomeAdmin.Name = "HomeAdmin";
+            HomeAdmin.Size = new Size(153, 34);
+            HomeAdmin.TabIndex = 2;
+            HomeAdmin.Text = "HOME";
+            HomeAdmin.UseVisualStyleBackColor = false;
             // 
             // HomepageAdmin
             // 
@@ -119,5 +133,6 @@
         private Button btnManageTransaksi;
         private Button btnPembelianDanPenyewaan;
         private Button btnManageCostume;
+        private Button b_exit;
     }
 }
