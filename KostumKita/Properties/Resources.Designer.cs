@@ -183,6 +183,16 @@ namespace KostumKita.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap KERANJANG {
+            get {
+                object obj = ResourceManager.GetObject("KERANJANG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap List_Kostum_Entertaiment {
             get {
                 object obj = ResourceManager.GetObject("List Kostum Entertaiment", resourceCulture);
@@ -206,6 +216,16 @@ namespace KostumKita.Properties {
         internal static System.Drawing.Bitmap List_Kostum_Tradisional1 {
             get {
                 object obj = ResourceManager.GetObject("List Kostum Tradisional1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LISTTRADISIONALBARU {
+            get {
+                object obj = ResourceManager.GetObject("LISTTRADISIONALBARU", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -30,6 +30,7 @@
         {
             Home4 = new Button();
             panel1 = new Panel();
+            pbKeranjang = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             transaksi3 = new Button();
@@ -38,6 +39,7 @@
             KostumEntertainment3 = new Button();
             KostumTradisional3 = new Button();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbKeranjang).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -58,8 +60,9 @@
             // panel1
             // 
             panel1.BackColor = Color.Maroon;
-            panel1.BackgroundImage = Properties.Resources.List_Kostum_Tradisional1;
+            panel1.BackgroundImage = Properties.Resources.LISTTRADISIONALBARU;
             panel1.BackgroundImageLayout = ImageLayout.Zoom;
+            panel1.Controls.Add(pbKeranjang);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(transaksi3);
@@ -72,6 +75,19 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1366, 768);
             panel1.TabIndex = 1;
+            panel1.Paint += panel1_Paint;
+            // 
+            // pbKeranjang
+            // 
+            pbKeranjang.BackColor = Color.White;
+            pbKeranjang.BackgroundImage = Properties.Resources.KERANJANG;
+            pbKeranjang.BackgroundImageLayout = ImageLayout.Zoom;
+            pbKeranjang.Location = new Point(558, 199);
+            pbKeranjang.Name = "pbKeranjang";
+            pbKeranjang.Size = new Size(31, 27);
+            pbKeranjang.TabIndex = 8;
+            pbKeranjang.TabStop = false;
+            pbKeranjang.Click += pictureBox3_Click;
             // 
             // pictureBox2
             // 
@@ -166,7 +182,9 @@
             Controls.Add(panel1);
             Name = "KostumTradisional";
             Text = "KostumTradisional";
+            Load += KostumTradisional_Load;
             panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pbKeranjang).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -183,5 +201,6 @@
         private Button keranjang3;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
+        private PictureBox pbKeranjang;
     }
 }

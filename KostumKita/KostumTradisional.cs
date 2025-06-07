@@ -1,4 +1,6 @@
-﻿using System;
+﻿using KostumKita.Model;
+using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,8 @@ namespace KostumKita
 {
     public partial class KostumTradisional : Form
     {
+        private string connStr = "Host=localhost;Username=postgres;Password=Sinta2074;Database=KostumKita";
+     
         public KostumTradisional()
         {
             InitializeComponent();
@@ -64,5 +68,41 @@ namespace KostumKita
             transaksiForm.Show();
             this.Hide();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            int id_kostum_traditional = 1; // ID dari kostum yang diklik
+            int jumlah = 1;
+
+            using (var conn = new NpgsqlConnection(connStr))
+            {
+                conn.Open();
+
+                string query = "INSERT INTO carts (id_kostum_traditional, jumlah, tanggal_ditambahkan) " +
+                               "VALUES (@id_kostum, @jumlah, @tanggal)";
+
+                using (var cmd = new NpgsqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("id_kostum", id_kostum_traditional);
+                    cmd.Parameters.AddWithValue("jumlah", jumlah);
+                    cmd.Parameters.AddWithValue("tanggal", DateTime.Now);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
+            MessageBox.Show("Kostum dimasukkan ke keranjang!");
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+      }
+
+        private void KostumTradisional_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
