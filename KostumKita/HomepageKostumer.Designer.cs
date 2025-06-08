@@ -103,9 +103,9 @@
             // 
             b_Exit.BackgroundImage = (Image)resources.GetObject("b_Exit.BackgroundImage");
             b_Exit.BackgroundImageLayout = ImageLayout.Center;
-            b_Exit.Location = new Point(1311, 26);
+            b_Exit.Location = new Point(1304, 26);
             b_Exit.Name = "b_Exit";
-            b_Exit.Size = new Size(30, 36);
+            b_Exit.Size = new Size(37, 36);
             b_Exit.TabIndex = 5;
             b_Exit.UseVisualStyleBackColor = true;
             b_Exit.Click += button1_Click;

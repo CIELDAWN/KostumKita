@@ -56,9 +56,9 @@
             // 
             b_exit.BackgroundImage = Properties.Resources.power_off_1;
             b_exit.BackgroundImageLayout = ImageLayout.Zoom;
-            b_exit.Location = new Point(1301, 33);
+            b_exit.Location = new Point(1302, 29);
             b_exit.Name = "b_exit";
-            b_exit.Size = new Size(36, 36);
+            b_exit.Size = new Size(43, 40);
             b_exit.TabIndex = 6;
             b_exit.UseVisualStyleBackColor = true;
             b_exit.Click += b_exit_Click;

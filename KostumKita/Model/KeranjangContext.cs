@@ -14,7 +14,7 @@ internal class KeranjangContext
 
     public KeranjangContext()
     {
-        conn = new NpgsqlConnection("Host=localhost;Port=5432;Username=postgres;Password=blackclover1;Database=KostumKita");
+        conn = new NpgsqlConnection("Host=localhost;Port=5432;Username=postgres;Password=Sinta2074;Database=KostumKita");
     }
 
     public void OpenConnection()
@@ -25,16 +25,30 @@ internal class KeranjangContext
         }
     }
 
+
     public void TambahKeranjangDariNama(string namaKostum, string jenisKostum)
     {
         try
         {
             OpenConnection();
 
-            // Cari id_kostum_tradisional dari nama kostum
-            string cariIdQuery = "SELECT id_kostum_tradisional FROM traditional_costumes WHERE nama_kostum = @nama";
+            string cariIdQuery = "";
             int id = -1;
 
+            if (jenisKostum == "tradisional")
+            {
+                cariIdQuery = "SELECT id_kostum_tradisional FROM traditional_costumes WHERE nama_kostum = @nama";
+            }
+            else if (jenisKostum == "entertainment")
+            {
+                cariIdQuery = "SELECT id_kostum_entertainment FROM entertainment_costumes WHERE nama_kostum = @nama";
+            }
+            else
+            {
+                throw new Exception("Jenis kostum tidak dikenali.");
+            }
+
+            // Cari ID berdasarkan jenis
             using (var cmd = new NpgsqlCommand(cariIdQuery, conn))
             {
                 cmd.Parameters.AddWithValue("nama", namaKostum);
@@ -49,13 +63,25 @@ internal class KeranjangContext
                 }
             }
 
-            // Masukkan ke tabel carts
-            string insertQuery = "INSERT INTO carts (id_kostum_tradisional,jenis_kostum, jumlah_item) VALUES (@id, @jenis, @jumlah)";
-            using (var cmd = new NpgsqlCommand(insertQuery, conn))
+            // Insert ke carts sesuai jenis kostum
+            using (var cmd = new NpgsqlCommand())
             {
-                cmd.Parameters.AddWithValue("id", id);
+                cmd.Connection = conn;
+
+                if (jenisKostum == "tradisional")
+                {
+                    cmd.CommandText = "INSERT INTO carts (id_kostum_tradisional, jenis_kostum, jumlah_item) VALUES (@id_kostum, @jenis, @jumlah)";
+                    cmd.Parameters.AddWithValue("id_kostum", id);
+                }
+                else if (jenisKostum == "entertainment")
+                {
+                    cmd.CommandText = "INSERT INTO carts (id_kostum_entertainment, jenis_kostum, jumlah_item) VALUES (@id_kostum, @jenis, @jumlah)";
+                    cmd.Parameters.AddWithValue("id_kostum", id);
+                }
+
                 cmd.Parameters.AddWithValue("jenis", jenisKostum);
                 cmd.Parameters.AddWithValue("jumlah", 1);
+
                 cmd.ExecuteNonQuery();
             }
         }
@@ -68,4 +94,7 @@ internal class KeranjangContext
             conn.Close();
         }
     }
+
+
 }
+

@@ -16,7 +16,7 @@ namespace KostumKita
 {
     public partial class KostumEntertainment : Form
     {
-        private string connStr = "Host=localhost;Username=postgres;Password=blackclover1;Database=KostumKita";
+        private string connStr = "Host=localhost;Username=postgres;Password=Sinta2074;Database=KostumKita";
 
         public KostumEntertainment()
         {
@@ -33,11 +33,13 @@ namespace KostumKita
 
         private void HandleKlikKostum(string namaKostum)
         {
+            // Tanya user mau beli atau sewa, mirip kode lama
             DialogResult result = MessageBox.Show(
-            $"Apakah Anda ingin membeli atau menyewa {namaKostum}?\nKlik Yes untuk 'Beli', No untuk 'Sewa'.",
-            "Pilihan Transaksi",
-            MessageBoxButtons.YesNoCancel,
-            MessageBoxIcon.Question);
+                $"Apakah Anda ingin membeli atau menyewa {namaKostum}?\nKlik Yes untuk 'Beli', No untuk 'Sewa'.",
+                "Pilihan Transaksi",
+                MessageBoxButtons.YesNoCancel,
+                MessageBoxIcon.Question);
+
             if (result == DialogResult.Yes)
             {
                 AddEntertainmentCostumeToCart(namaKostum, "beli");
@@ -149,7 +151,6 @@ namespace KostumKita
                             decimal hargaBeli = reader.GetDecimal(reader.GetOrdinal("harga_beli"));
                             string stok = reader["jumlah_stok"].ToString();
 
-                            // Panel utama untuk setiap produk
                             Panel produkPanel = new Panel
                             {
                                 Width = 350,
@@ -158,7 +159,6 @@ namespace KostumKita
                                 Margin = new Padding(10)
                             };
 
-                            // PictureBox untuk gambar
                             PictureBox pb = new PictureBox
                             {
                                 Image = img,
@@ -170,7 +170,6 @@ namespace KostumKita
                                 Top = 10
                             };
 
-                            // Panel untuk info produk (nama, harga, stok)
                             Panel infoPanel = new Panel
                             {
                                 Width = 200,
@@ -189,6 +188,10 @@ namespace KostumKita
                                 Top = 0,
                                 Left = 0
                             };
+
+                            lblNama.Cursor = Cursors.Hand;
+                            lblNama.ForeColor = Color.Blue;
+                            lblNama.Click += (s, e) => HandleKlikKostum(nama);
 
                             Label lblHargaSewa = new Label
                             {
@@ -228,6 +231,9 @@ namespace KostumKita
                             produkPanel.Controls.Add(pb);
                             produkPanel.Controls.Add(infoPanel);
 
+                            produkPanel.Cursor = Cursors.Hand;
+                            produkPanel.Click += (s, e) => HandleKlikKostum(nama);
+
                             maincontainer.Controls.Add(produkPanel);
                         }
                     }
@@ -238,6 +244,7 @@ namespace KostumKita
                 MessageBox.Show("Gagal memuat data: " + ex.Message);
             }
         }
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {

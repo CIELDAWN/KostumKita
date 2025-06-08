@@ -37,18 +37,20 @@
             l_Sewa = new Label();
             b_gambar = new Button();
             b_Remove = new Button();
-            label1 = new Label();
             tb_remove = new TextBox();
             b_Manage_Transaksi = new Button();
             b_Manage_Sewa_Beli = new Button();
             b_Manage = new Button();
             b_Home = new Button();
+            button1 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.BackgroundImageLayout = ImageLayout.Zoom;
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(l_Stock);
             panel1.Controls.Add(l_Nama);
             panel1.Controls.Add(l_asal);
@@ -56,7 +58,6 @@
             panel1.Controls.Add(l_Sewa);
             panel1.Controls.Add(b_gambar);
             panel1.Controls.Add(b_Remove);
-            panel1.Controls.Add(label1);
             panel1.Controls.Add(tb_remove);
             panel1.Controls.Add(b_Manage_Transaksi);
             panel1.Controls.Add(b_Manage_Sewa_Beli);
@@ -110,7 +111,7 @@
             // 
             // b_gambar
             // 
-            b_gambar.Location = new Point(736, 185);
+            b_gambar.Location = new Point(735, 185);
             b_gambar.Name = "b_gambar";
             b_gambar.Size = new Size(156, 124);
             b_gambar.TabIndex = 7;
@@ -119,26 +120,20 @@
             // 
             // b_Remove
             // 
-            b_Remove.Location = new Point(350, 374);
+            b_Remove.BackColor = Color.Maroon;
+            b_Remove.Font = new Font("Britannic Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            b_Remove.ForeColor = Color.White;
+            b_Remove.Location = new Point(594, 550);
             b_Remove.Name = "b_Remove";
-            b_Remove.Size = new Size(86, 33);
+            b_Remove.Size = new Size(179, 52);
             b_Remove.TabIndex = 6;
             b_Remove.Text = "Remove";
-            b_Remove.UseVisualStyleBackColor = true;
+            b_Remove.UseVisualStyleBackColor = false;
             b_Remove.Click += b_Remove_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(337, 430);
-            label1.Name = "label1";
-            label1.Size = new Size(158, 15);
-            label1.TabIndex = 5;
-            label1.Text = "Kostum Yang Ingin Di Hapus";
             // 
             // tb_remove
             // 
-            tb_remove.Location = new Point(806, 143);
+            tb_remove.Location = new Point(807, 139);
             tb_remove.Name = "tb_remove";
             tb_remove.Size = new Size(202, 23);
             tb_remove.TabIndex = 4;
@@ -186,6 +181,18 @@
             b_Home.UseVisualStyleBackColor = true;
             b_Home.Click += b_Home_Click;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.Maroon;
+            button1.Font = new Font("Britannic Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(848, 550);
+            button1.Name = "button1";
+            button1.Size = new Size(179, 51);
+            button1.TabIndex = 13;
+            button1.Text = "Cancel";
+            button1.UseVisualStyleBackColor = false;
+            // 
             // Remove_Costume
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -207,7 +214,6 @@
         private Button b_Home;
         private Button b_Manage_Sewa_Beli;
         private Button b_Manage_Transaksi;
-        private Label label1;
         private TextBox tb_remove;
         private Button b_Remove;
         private Button b_gambar;
@@ -216,5 +222,6 @@
         private Label l_asal;
         private Label l_Stock;
         private Label l_Nama;
+        private Button button1;
     }
 }

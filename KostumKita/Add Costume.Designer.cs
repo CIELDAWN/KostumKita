@@ -41,13 +41,17 @@
             b_PilihGambar = new Button();
             b_Manage = new Button();
             b_Home = new Button();
+            ManagePenyewaanPembelian = new Button();
+            ManageTransaksi = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
-            panel1.BackgroundImageLayout = ImageLayout.Center;
+            panel1.BackgroundImageLayout = ImageLayout.Zoom;
+            panel1.Controls.Add(ManageTransaksi);
+            panel1.Controls.Add(ManagePenyewaanPembelian);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(cb_category);
             panel1.Controls.Add(tb_Sewa);
@@ -77,7 +81,7 @@
             // 
             cb_category.FormattingEnabled = true;
             cb_category.Items.AddRange(new object[] { "Entertainment", "Traditional" });
-            cb_category.Location = new Point(700, 134);
+            cb_category.Location = new Point(702, 130);
             cb_category.Name = "cb_category";
             cb_category.Size = new Size(227, 23);
             cb_category.TabIndex = 12;
@@ -85,7 +89,7 @@
             // 
             // tb_Sewa
             // 
-            tb_Sewa.Location = new Point(747, 472);
+            tb_Sewa.Location = new Point(747, 470);
             tb_Sewa.Name = "tb_Sewa";
             tb_Sewa.Size = new Size(269, 23);
             tb_Sewa.TabIndex = 11;
@@ -114,7 +118,7 @@
             // 
             // tb_stock
             // 
-            tb_stock.Location = new Point(700, 511);
+            tb_stock.Location = new Point(672, 515);
             tb_stock.Name = "tb_stock";
             tb_stock.Size = new Size(260, 23);
             tb_stock.TabIndex = 5;
@@ -122,14 +126,14 @@
             // 
             // tb_Harga
             // 
-            tb_Harga.Location = new Point(712, 422);
+            tb_Harga.Location = new Point(707, 422);
             tb_Harga.Name = "tb_Harga";
             tb_Harga.Size = new Size(304, 23);
             tb_Harga.TabIndex = 4;
             // 
             // tb_Nama_Costume
             // 
-            tb_Nama_Costume.Location = new Point(700, 378);
+            tb_Nama_Costume.Location = new Point(698, 375);
             tb_Nama_Costume.Name = "tb_Nama_Costume";
             tb_Nama_Costume.Size = new Size(316, 23);
             tb_Nama_Costume.TabIndex = 3;
@@ -138,7 +142,7 @@
             // b_PilihGambar
             // 
             b_PilihGambar.BackgroundImageLayout = ImageLayout.Center;
-            b_PilihGambar.Location = new Point(747, 220);
+            b_PilihGambar.Location = new Point(751, 213);
             b_PilihGambar.Name = "b_PilihGambar";
             b_PilihGambar.Size = new Size(127, 114);
             b_PilihGambar.TabIndex = 2;
@@ -147,24 +151,54 @@
             // 
             // b_Manage
             // 
-            b_Manage.BackgroundImage = (Image)resources.GetObject("b_Manage.BackgroundImage");
-            b_Manage.Location = new Point(77, 233);
+            b_Manage.BackColor = Color.LightCoral;
+            b_Manage.Font = new Font("Britannic Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            b_Manage.ForeColor = Color.White;
+            b_Manage.Location = new Point(77, 230);
             b_Manage.Name = "b_Manage";
-            b_Manage.Size = new Size(154, 31);
+            b_Manage.Size = new Size(154, 34);
             b_Manage.TabIndex = 1;
-            b_Manage.UseVisualStyleBackColor = true;
+            b_Manage.Text = "MANAGE COSTUME";
+            b_Manage.UseVisualStyleBackColor = false;
             b_Manage.Click += b_Manage_Click;
             // 
             // b_Home
             // 
-            b_Home.BackgroundImage = (Image)resources.GetObject("b_Home.BackgroundImage");
+            b_Home.BackColor = Color.LightCoral;
             b_Home.BackgroundImageLayout = ImageLayout.Center;
-            b_Home.Location = new Point(72, 144);
+            b_Home.Font = new Font("Britannic Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            b_Home.ForeColor = Color.White;
+            b_Home.Location = new Point(72, 143);
             b_Home.Name = "b_Home";
             b_Home.Size = new Size(159, 31);
             b_Home.TabIndex = 0;
-            b_Home.UseVisualStyleBackColor = true;
+            b_Home.Text = "HOME";
+            b_Home.UseVisualStyleBackColor = false;
             b_Home.Click += b_Home_Click;
+            // 
+            // ManagePenyewaanPembelian
+            // 
+            ManagePenyewaanPembelian.BackColor = Color.LightCoral;
+            ManagePenyewaanPembelian.Font = new Font("Britannic Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ManagePenyewaanPembelian.ForeColor = Color.White;
+            ManagePenyewaanPembelian.Location = new Point(74, 318);
+            ManagePenyewaanPembelian.Name = "ManagePenyewaanPembelian";
+            ManagePenyewaanPembelian.Size = new Size(157, 40);
+            ManagePenyewaanPembelian.TabIndex = 14;
+            ManagePenyewaanPembelian.Text = "MANAGE PENYEWAAN DAN PEMBELIAN";
+            ManagePenyewaanPembelian.UseVisualStyleBackColor = false;
+            // 
+            // ManageTransaksi
+            // 
+            ManageTransaksi.BackColor = Color.LightCoral;
+            ManageTransaksi.Font = new Font("Britannic Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ManageTransaksi.ForeColor = Color.White;
+            ManageTransaksi.Location = new Point(74, 413);
+            ManageTransaksi.Name = "ManageTransaksi";
+            ManageTransaksi.Size = new Size(157, 33);
+            ManageTransaksi.TabIndex = 15;
+            ManageTransaksi.Text = "MANAGE TRANSAKSI";
+            ManageTransaksi.UseVisualStyleBackColor = false;
             // 
             // Add_Costume
             // 
@@ -194,5 +228,7 @@
         private TextBox tb_Sewa;
         private ComboBox cb_category;
         private Label label1;
+        private Button ManagePenyewaanPembelian;
+        private Button ManageTransaksi;
     }
 }

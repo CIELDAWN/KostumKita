@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Home = new PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KostumEntertainment));
             Home2 = new Button();
-            pictureBox1 = new PictureBox();
             KostumTradisional1 = new Button();
             KostumEntertainment2 = new Button();
             Live2 = new Button();
@@ -38,21 +37,10 @@
             Transaksi2 = new Button();
             panel1 = new Panel();
             maincontainer = new FlowLayoutPanel();
-            ((System.ComponentModel.ISupportInitialize)Home).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // Home
-            // 
-            Home.BackgroundImage = Properties.Resources.Screenshot_2025_05_30_021749;
-            Home.BackgroundImageLayout = ImageLayout.Zoom;
-            Home.Location = new Point(1293, 25);
-            Home.Name = "Home";
-            Home.Size = new Size(50, 47);
-            Home.TabIndex = 0;
-            Home.TabStop = false;
-            Home.Click += Home_Click;
             // 
             // Home2
             // 
@@ -66,16 +54,6 @@
             Home2.Text = "HOME";
             Home2.UseVisualStyleBackColor = false;
             Home2.Click += Home2_Click;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackgroundImage = Properties.Resources.Screenshot_2025_05_30_145933;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(1182, 31);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(94, 37);
-            pictureBox1.TabIndex = 2;
-            pictureBox1.TabStop = false;
             // 
             // KostumTradisional1
             // 
@@ -145,7 +123,7 @@
             // panel1
             // 
             panel1.BackColor = Color.Maroon;
-            panel1.BackgroundImage = Properties.Resources.entertainment_kostum;
+            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.BackgroundImageLayout = ImageLayout.Zoom;
             panel1.Controls.Add(maincontainer);
             panel1.Controls.Add(Transaksi2);
@@ -155,7 +133,6 @@
             panel1.Controls.Add(KostumTradisional1);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(Home2);
-            panel1.Controls.Add(Home);
             panel1.ForeColor = Color.DarkRed;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -172,6 +149,16 @@
             maincontainer.Size = new Size(1062, 567);
             maincontainer.TabIndex = 8;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = Properties.Resources.Screenshot_2025_05_30_145933;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox1.Location = new Point(1234, 29);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(94, 37);
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
+            // 
             // KostumEntertainment
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -181,17 +168,13 @@
             Name = "KostumEntertainment";
             Text = "KostumEntertainment";
             Load += KostumEntertainment_Load;
-            ((System.ComponentModel.ISupportInitialize)Home).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private PictureBox Home;
         private Button Home2;
-        private PictureBox pictureBox1;
         private Button KostumTradisional1;
         private Button KostumEntertainment2;
         private Button Live2;
@@ -199,5 +182,6 @@
         private Button Transaksi2;
         private Panel panel1;
         private FlowLayoutPanel maincontainer;
+        private PictureBox pictureBox1;
     }
 }

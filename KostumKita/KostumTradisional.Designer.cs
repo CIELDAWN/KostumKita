@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KostumTradisional));
             Home4 = new Button();
             panel1 = new Panel();
             pictureBox2 = new PictureBox();
-            pictureBox1 = new PictureBox();
             transaksi3 = new Button();
             keranjang3 = new Button();
             Live3 = new Button();
@@ -40,7 +40,6 @@
             maincontainer = new FlowLayoutPanel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // Home4
@@ -59,10 +58,9 @@
             // panel1
             // 
             panel1.BackColor = Color.Maroon;
-            panel1.BackgroundImage = Properties.Resources.list_kostum_terbaru;
+            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.BackgroundImageLayout = ImageLayout.Zoom;
             panel1.Controls.Add(pictureBox2);
-            panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(transaksi3);
             panel1.Controls.Add(keranjang3);
             panel1.Controls.Add(Live3);
@@ -80,21 +78,11 @@
             // 
             pictureBox2.BackgroundImage = Properties.Resources.Screenshot_2025_05_30_145933;
             pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox2.Location = new Point(1194, 35);
+            pictureBox2.Location = new Point(1232, 31);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(96, 34);
             pictureBox2.TabIndex = 7;
             pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackgroundImage = Properties.Resources.Screenshot_2025_05_30_021749;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(1306, 32);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(39, 41);
-            pictureBox1.TabIndex = 6;
-            pictureBox1.TabStop = false;
             // 
             // transaksi3
             // 
@@ -181,7 +169,6 @@
             Load += KostumTradisional_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -195,7 +182,6 @@
         private Button transaksi3;
         private Button keranjang3;
         private PictureBox pictureBox2;
-        private PictureBox pictureBox1;
         private FlowLayoutPanel maincontainer;
     }
 }

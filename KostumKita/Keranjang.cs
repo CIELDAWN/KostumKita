@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
 
 namespace KostumKita
 {
     public partial class Keranjang : Form
     {
+        private string connStr = "Host=localhost;Username=postgres;Password=Sinta2074;Database=KostumKita";
+
         public Keranjang()
         {
             InitializeComponent();
@@ -24,7 +28,204 @@ namespace KostumKita
             homepageKostumerForm.Show();
             this.Hide();
         }
-    } 
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            KostumTradisional kostumTradisionalForm = new KostumTradisional();
+            kostumTradisionalForm.WindowState = FormWindowState.Maximized;
+            kostumTradisionalForm.Show();
+            this.Hide();
+        }
+
+        private void KostumEntertainment4_Click(object sender, EventArgs e)
+        {
+            KostumEntertainment kostumEntertainmentForm = new KostumEntertainment();
+            kostumEntertainmentForm.WindowState = FormWindowState.Maximized;
+            kostumEntertainmentForm.Show();
+            this.Hide();
+        }
+
+        private void Live4_Click(object sender, EventArgs e)
+        {
+            Live LiveForm = new Live();
+            LiveForm.WindowState = FormWindowState.Maximized;
+            LiveForm.Show();
+            this.Hide();
+        }
+
+        private void Keranjang4_Click(object sender, EventArgs e)
+        {
+            Keranjang keranjangForm = new Keranjang();
+            keranjangForm.WindowState = FormWindowState.Maximized;
+            keranjangForm.Show();
+            this.Hide();
+        }
+
+        private void Transaksi4_Click(object sender, EventArgs e)
+        {
+            Transaksi transaksiForm = new Transaksi();
+            transaksiForm.WindowState = FormWindowState.Maximized;
+            transaksiForm.Show();
+            this.Hide();
+        }
+
+        private void Keranjang_Load(object sender, EventArgs e)
+        {
+            LoadKeranjangTradisionalEntertainmentPanels();
+        }
+
+
+        private void LoadKeranjangTradisionalEntertainmentPanels()
+        {
+            try
+            {
+                maincontainer.Controls.Clear();
+                maincontainer.FlowDirection = FlowDirection.LeftToRight;
+                maincontainer.WrapContents = true;
+                maincontainer.AutoScroll = true;
+
+                using (var conn = new NpgsqlConnection(connStr))
+                {
+                    conn.Open();
+                    string query = @"
+                SELECT 
+                    c.id_cart, 
+                    c.jumlah_item, 
+                    t.nama_kostum, 
+                    t.asal_daerah, 
+                    t.harga_sewa, 
+                    t.gambar,
+                    'tradisional' AS sumber
+                FROM carts c
+                JOIN traditional_costumes t ON c.id_kostum_tradisional = t.id_kostum_tradisional
+                WHERE c.jenis_kostum = 'sewa'
+
+                UNION ALL
+
+                SELECT 
+                    c.id_cart, 
+                    c.jumlah_item, 
+                    c.jenis_kostum,
+                    e.nama_kostum, 
+                    e.harga_sewa, 
+                    e.harga_beli,
+                    e.gambar
+                FROM 
+                    carts c
+                JOIN 
+                    entertainment_costumes e ON c.id_kostum_entertainment = e.id_kostum_entertainment
+                WHERE 
+                    c.id_kostum_entertainment IS NOT NULL;
+                ";
+
+                    using (var cmd = new NpgsqlCommand(query, conn))
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        int count = 0;
+
+                        while (reader.Read())
+                        {
+                            count++;
+
+                            Image img = null;
+                            if (!reader.IsDBNull(reader.GetOrdinal("gambar")))
+                            {
+                                byte[] imgBytes = (byte[])reader["gambar"];
+                                using (MemoryStream ms = new MemoryStream(imgBytes))
+                                {
+                                    img = Image.FromStream(ms);
+                                }
+                            }
+
+                            string nama = reader["nama_kostum"].ToString();
+                            string asal = reader["asal_daerah"].ToString(); // bisa asal daerah atau tema acara
+                            decimal harga = reader.GetDecimal(reader.GetOrdinal("harga_sewa"));
+                            int jumlah = reader.GetInt32(reader.GetOrdinal("jumlah_item"));
+
+                            Panel panelKeranjang = new Panel
+                            {
+                                Width = 360,
+                                Height = 180,
+                                BorderStyle = BorderStyle.FixedSingle,
+                                Margin = new Padding(10)
+                            };
+
+                            PictureBox pb = new PictureBox
+                            {
+                                Image = img,
+                                SizeMode = PictureBoxSizeMode.Zoom,
+                                Width = 100,
+                                Height = 100,
+                                Top = 10,
+                                Left = 10
+                            };
+
+                            Label lblNama = new Label
+                            {
+                                Text = nama,
+                                Font = new Font("Segoe UI", 10, FontStyle.Bold),
+                                AutoSize = true,
+                                Top = 10,
+                                Left = 120
+                            };
+
+                            Label lblAsal = new Label
+                            {
+                                Text = "Asal/Tematik: " + asal,
+                                AutoSize = true,
+                                Top = lblNama.Bottom + 5,
+                                Left = 120
+                            };
+
+                            Label lblHarga = new Label
+                            {
+                                Text = "Harga: " + harga.ToString("C"),
+                                AutoSize = true,
+                                Top = lblAsal.Bottom + 5,
+                                Left = 120
+                            };
+
+                            Label lblJumlah = new Label
+                            {
+                                Text = "Jumlah: " + jumlah.ToString(),
+                                AutoSize = true,
+                                Top = lblHarga.Bottom + 5,
+                                Left = 120
+                            };
+
+                            panelKeranjang.Controls.Add(pb);
+                            panelKeranjang.Controls.Add(lblNama);
+                            panelKeranjang.Controls.Add(lblAsal);
+                            panelKeranjang.Controls.Add(lblHarga);
+                            panelKeranjang.Controls.Add(lblJumlah);
+
+                            maincontainer.Controls.Add(panelKeranjang);
+                        }
+
+                        if (count == 0)
+                        {
+                            MessageBox.Show("Tidak ada data di keranjang.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal memuat keranjang: " + ex.Message);
+            }
+        }
+
+
+        private void rkeranjang_Click(object sender, EventArgs e)
+        {
+            LoadKeranjangTradisionalEntertainmentPanels();
+        }
+
+        private void Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+    }
 
     public class ItemKeranjang
     {
