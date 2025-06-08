@@ -13,7 +13,7 @@ namespace KostumKita
 {
     public partial class Remove_Costume : Form
     {
-        private string connStr = "Host=localhost;Username=postgres;Password=stanley;Database=KostumKita";
+        private string connStr = "Host=localhost;Username=postgres;Password=Sinta2074;Database=KostumKita";
 
         public Remove_Costume()
         {
@@ -156,7 +156,7 @@ namespace KostumKita
                         }
                     }
 
-                    
+
                     l_Nama.Text = "Kostum tidak ditemukan";
                     l_Sewa.Text = "";
                     l_harga.Text = "";
@@ -216,6 +216,11 @@ namespace KostumKita
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Remove_Costume_Load(object sender, EventArgs e)
         {
 
         }

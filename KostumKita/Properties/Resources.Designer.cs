@@ -73,6 +73,16 @@ namespace KostumKita.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap entertainment_kostum {
+            get {
+                object obj = ResourceManager.GetObject("entertainment kostum", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Frame_1020 {
             get {
                 object obj = ResourceManager.GetObject("Frame 1020", resourceCulture);
@@ -196,6 +206,16 @@ namespace KostumKita.Properties {
         internal static System.Drawing.Bitmap List_Kostum_Entertaiment {
             get {
                 object obj = ResourceManager.GetObject("List Kostum Entertaiment", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap list_kostum_terbaru {
+            get {
+                object obj = ResourceManager.GetObject("list kostum terbaru", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

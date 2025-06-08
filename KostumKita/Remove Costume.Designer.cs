@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Remove_Costume));
             panel1 = new Panel();
+            l_Stock = new Label();
+            l_Nama = new Label();
             l_asal = new Label();
             l_harga = new Label();
             l_Sewa = new Label();
@@ -41,8 +43,6 @@
             b_Manage_Sewa_Beli = new Button();
             b_Manage = new Button();
             b_Home = new Button();
-            l_Nama = new Label();
-            l_Stock = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -67,6 +67,22 @@
             panel1.Size = new Size(1366, 768);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
+            // 
+            // l_Stock
+            // 
+            l_Stock.AutoSize = true;
+            l_Stock.Location = new Point(681, 523);
+            l_Stock.Name = "l_Stock";
+            l_Stock.Size = new Size(0, 15);
+            l_Stock.TabIndex = 12;
+            // 
+            // l_Nama
+            // 
+            l_Nama.AutoSize = true;
+            l_Nama.Location = new Point(695, 345);
+            l_Nama.Name = "l_Nama";
+            l_Nama.Size = new Size(0, 15);
+            l_Nama.TabIndex = 11;
             // 
             // l_asal
             // 
@@ -170,22 +186,6 @@
             b_Home.UseVisualStyleBackColor = true;
             b_Home.Click += b_Home_Click;
             // 
-            // l_Nama
-            // 
-            l_Nama.AutoSize = true;
-            l_Nama.Location = new Point(695, 345);
-            l_Nama.Name = "l_Nama";
-            l_Nama.Size = new Size(0, 15);
-            l_Nama.TabIndex = 11;
-            // 
-            // l_Stock
-            // 
-            l_Stock.AutoSize = true;
-            l_Stock.Location = new Point(681, 523);
-            l_Stock.Name = "l_Stock";
-            l_Stock.Size = new Size(0, 15);
-            l_Stock.TabIndex = 12;
-            // 
             // Remove_Costume
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -194,6 +194,7 @@
             Controls.Add(panel1);
             Name = "Remove_Costume";
             Text = "Remove_Costume";
+            Load += Remove_Costume_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

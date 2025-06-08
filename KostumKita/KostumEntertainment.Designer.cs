@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KostumEntertainment));
             Home = new PictureBox();
             Home2 = new Button();
             pictureBox1 = new PictureBox();
@@ -38,18 +37,7 @@
             keranjang2 = new Button();
             Transaksi2 = new Button();
             panel1 = new Panel();
-            btnAlmaMHW = new Button();
-            btnBakugo = new Button();
-            btnVioletEvergarden = new Button();
-            btnHatsuneMiku = new Button();
-            btnKoboKanaeruKimono = new Button();
-            btnDeku = new Button();
-            btnGawrGura = new Button();
-            btnKafka = new Button();
-            btnYaeMiko = new Button();
-            btnKibutsujiMuzan = new Button();
-            btnMikasaFinalPart = new Button();
-            btnSailorMoon = new Button();
+            maincontainer = new FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)Home).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
@@ -157,20 +145,9 @@
             // panel1
             // 
             panel1.BackColor = Color.Maroon;
-            panel1.BackgroundImage = Properties.Resources.List_Kostum_Entertaiment;
+            panel1.BackgroundImage = Properties.Resources.entertainment_kostum;
             panel1.BackgroundImageLayout = ImageLayout.Zoom;
-            panel1.Controls.Add(btnAlmaMHW);
-            panel1.Controls.Add(btnBakugo);
-            panel1.Controls.Add(btnVioletEvergarden);
-            panel1.Controls.Add(btnHatsuneMiku);
-            panel1.Controls.Add(btnKoboKanaeruKimono);
-            panel1.Controls.Add(btnDeku);
-            panel1.Controls.Add(btnGawrGura);
-            panel1.Controls.Add(btnKafka);
-            panel1.Controls.Add(btnYaeMiko);
-            panel1.Controls.Add(btnKibutsujiMuzan);
-            panel1.Controls.Add(btnMikasaFinalPart);
-            panel1.Controls.Add(btnSailorMoon);
+            panel1.Controls.Add(maincontainer);
             panel1.Controls.Add(Transaksi2);
             panel1.Controls.Add(keranjang2);
             panel1.Controls.Add(Live2);
@@ -184,126 +161,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1366, 768);
             panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
             // 
-            // btnAlmaMHW
+            // maincontainer
             // 
-            btnAlmaMHW.BackgroundImage = (Image)resources.GetObject("btnAlmaMHW.BackgroundImage");
-            btnAlmaMHW.BackgroundImageLayout = ImageLayout.Center;
-            btnAlmaMHW.Location = new Point(1095, 547);
-            btnAlmaMHW.Name = "btnAlmaMHW";
-            btnAlmaMHW.Size = new Size(234, 105);
-            btnAlmaMHW.TabIndex = 19;
-            btnAlmaMHW.UseVisualStyleBackColor = true;
-            // 
-            // btnBakugo
-            // 
-            btnBakugo.BackgroundImage = (Image)resources.GetObject("btnBakugo.BackgroundImage");
-            btnBakugo.BackgroundImageLayout = ImageLayout.Center;
-            btnBakugo.Location = new Point(1095, 413);
-            btnBakugo.Name = "btnBakugo";
-            btnBakugo.Size = new Size(234, 105);
-            btnBakugo.TabIndex = 18;
-            btnBakugo.UseVisualStyleBackColor = true;
-            // 
-            // btnVioletEvergarden
-            // 
-            btnVioletEvergarden.BackgroundImage = (Image)resources.GetObject("btnVioletEvergarden.BackgroundImage");
-            btnVioletEvergarden.BackgroundImageLayout = ImageLayout.Center;
-            btnVioletEvergarden.Location = new Point(1095, 272);
-            btnVioletEvergarden.Name = "btnVioletEvergarden";
-            btnVioletEvergarden.Size = new Size(234, 105);
-            btnVioletEvergarden.TabIndex = 17;
-            btnVioletEvergarden.UseVisualStyleBackColor = true;
-            // 
-            // btnHatsuneMiku
-            // 
-            btnHatsuneMiku.BackgroundImage = (Image)resources.GetObject("btnHatsuneMiku.BackgroundImage");
-            btnHatsuneMiku.BackgroundImageLayout = ImageLayout.Center;
-            btnHatsuneMiku.Location = new Point(1095, 129);
-            btnHatsuneMiku.Name = "btnHatsuneMiku";
-            btnHatsuneMiku.Size = new Size(234, 105);
-            btnHatsuneMiku.TabIndex = 16;
-            btnHatsuneMiku.UseVisualStyleBackColor = true;
-            // 
-            // btnKoboKanaeruKimono
-            // 
-            btnKoboKanaeruKimono.BackgroundImage = (Image)resources.GetObject("btnKoboKanaeruKimono.BackgroundImage");
-            btnKoboKanaeruKimono.BackgroundImageLayout = ImageLayout.Center;
-            btnKoboKanaeruKimono.Location = new Point(705, 547);
-            btnKoboKanaeruKimono.Name = "btnKoboKanaeruKimono";
-            btnKoboKanaeruKimono.Size = new Size(234, 105);
-            btnKoboKanaeruKimono.TabIndex = 15;
-            btnKoboKanaeruKimono.UseVisualStyleBackColor = true;
-            // 
-            // btnDeku
-            // 
-            btnDeku.BackgroundImage = (Image)resources.GetObject("btnDeku.BackgroundImage");
-            btnDeku.BackgroundImageLayout = ImageLayout.Center;
-            btnDeku.Location = new Point(705, 414);
-            btnDeku.Name = "btnDeku";
-            btnDeku.Size = new Size(234, 105);
-            btnDeku.TabIndex = 14;
-            btnDeku.UseVisualStyleBackColor = true;
-            // 
-            // btnGawrGura
-            // 
-            btnGawrGura.BackgroundImage = (Image)resources.GetObject("btnGawrGura.BackgroundImage");
-            btnGawrGura.BackgroundImageLayout = ImageLayout.Center;
-            btnGawrGura.Location = new Point(705, 272);
-            btnGawrGura.Name = "btnGawrGura";
-            btnGawrGura.Size = new Size(234, 105);
-            btnGawrGura.TabIndex = 13;
-            btnGawrGura.UseVisualStyleBackColor = true;
-            // 
-            // btnKafka
-            // 
-            btnKafka.BackgroundImage = (Image)resources.GetObject("btnKafka.BackgroundImage");
-            btnKafka.BackgroundImageLayout = ImageLayout.Center;
-            btnKafka.Location = new Point(705, 129);
-            btnKafka.Name = "btnKafka";
-            btnKafka.Size = new Size(234, 105);
-            btnKafka.TabIndex = 12;
-            btnKafka.UseVisualStyleBackColor = true;
-            // 
-            // btnYaeMiko
-            // 
-            btnYaeMiko.BackgroundImage = (Image)resources.GetObject("btnYaeMiko.BackgroundImage");
-            btnYaeMiko.BackgroundImageLayout = ImageLayout.Center;
-            btnYaeMiko.Location = new Point(319, 547);
-            btnYaeMiko.Name = "btnYaeMiko";
-            btnYaeMiko.Size = new Size(234, 105);
-            btnYaeMiko.TabIndex = 11;
-            btnYaeMiko.UseVisualStyleBackColor = true;
-            // 
-            // btnKibutsujiMuzan
-            // 
-            btnKibutsujiMuzan.BackgroundImage = (Image)resources.GetObject("btnKibutsujiMuzan.BackgroundImage");
-            btnKibutsujiMuzan.BackgroundImageLayout = ImageLayout.Center;
-            btnKibutsujiMuzan.Location = new Point(319, 414);
-            btnKibutsujiMuzan.Name = "btnKibutsujiMuzan";
-            btnKibutsujiMuzan.Size = new Size(234, 105);
-            btnKibutsujiMuzan.TabIndex = 10;
-            btnKibutsujiMuzan.UseVisualStyleBackColor = true;
-            // 
-            // btnMikasaFinalPart
-            // 
-            btnMikasaFinalPart.BackgroundImage = (Image)resources.GetObject("btnMikasaFinalPart.BackgroundImage");
-            btnMikasaFinalPart.BackgroundImageLayout = ImageLayout.Center;
-            btnMikasaFinalPart.Location = new Point(319, 272);
-            btnMikasaFinalPart.Name = "btnMikasaFinalPart";
-            btnMikasaFinalPart.Size = new Size(234, 105);
-            btnMikasaFinalPart.TabIndex = 9;
-            btnMikasaFinalPart.UseVisualStyleBackColor = true;
-            // 
-            // btnSailorMoon
-            // 
-            btnSailorMoon.BackgroundImage = (Image)resources.GetObject("btnSailorMoon.BackgroundImage");
-            btnSailorMoon.BackgroundImageLayout = ImageLayout.Center;
-            btnSailorMoon.Location = new Point(319, 129);
-            btnSailorMoon.Name = "btnSailorMoon";
-            btnSailorMoon.Size = new Size(234, 105);
-            btnSailorMoon.TabIndex = 8;
-            btnSailorMoon.UseVisualStyleBackColor = true;
+            maincontainer.AutoScroll = true;
+            maincontainer.BackColor = Color.White;
+            maincontainer.Location = new Point(289, 100);
+            maincontainer.Name = "maincontainer";
+            maincontainer.Size = new Size(1062, 567);
+            maincontainer.TabIndex = 8;
             // 
             // KostumEntertainment
             // 
@@ -313,6 +180,7 @@
             Controls.Add(panel1);
             Name = "KostumEntertainment";
             Text = "KostumEntertainment";
+            Load += KostumEntertainment_Load;
             ((System.ComponentModel.ISupportInitialize)Home).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
@@ -330,17 +198,6 @@
         private Button keranjang2;
         private Button Transaksi2;
         private Panel panel1;
-        private Button btnAlmaMHW;
-        private Button btnBakugo;
-        private Button btnVioletEvergarden;
-        private Button btnHatsuneMiku;
-        private Button btnKoboKanaeruKimono;
-        private Button btnDeku;
-        private Button btnGawrGura;
-        private Button btnKafka;
-        private Button btnYaeMiko;
-        private Button btnKibutsujiMuzan;
-        private Button btnMikasaFinalPart;
-        private Button btnSailorMoon;
+        private FlowLayoutPanel maincontainer;
     }
 }

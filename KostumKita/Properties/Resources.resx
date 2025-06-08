@@ -124,6 +124,9 @@
   <data name="Group 472" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group 472.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="list kostum terbaru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\list kostum terbaru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Screenshot 2025-05-30 145404" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Screenshot 2025-05-30 145404.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -160,6 +163,9 @@
   <data name="List Kostum Tradisional" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\List Kostum Tradisional.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Log in" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Log in.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Desktop - 6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Desktop - 6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -187,8 +193,8 @@
   <data name="Homepage Kostumer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Homepage Kostumer1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Homepage Kostumerbissmillah" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Homepage Kostumerbissmillah.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="KERANJANG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KERANJANG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Frame 1021" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Frame 1021.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,8 +217,8 @@
   <data name="Log in FIX1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Log in FIX1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Log in" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Log in.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Homepage Kostumerbissmillah" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Homepage Kostumerbissmillah.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="List Kostum Tradisional1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\List Kostum Tradisional1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,7 +226,7 @@
   <data name="Lock1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lock1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="KERANJANG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KERANJANG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="entertainment kostum" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\entertainment kostum.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

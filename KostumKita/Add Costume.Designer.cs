@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Costume));
             panel1 = new Panel();
+            label1 = new Label();
             cb_category = new ComboBox();
             tb_Sewa = new TextBox();
             b_Cancel = new Button();
@@ -40,7 +41,6 @@
             b_PilihGambar = new Button();
             b_Manage = new Button();
             b_Home = new Button();
-            label1 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -63,6 +63,15 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1366, 768);
             panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(586, 160);
+            label1.Name = "label1";
+            label1.Size = new Size(0, 25);
+            label1.TabIndex = 13;
             // 
             // cb_category
             // 
@@ -157,15 +166,6 @@
             b_Home.UseVisualStyleBackColor = true;
             b_Home.Click += b_Home_Click;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(586, 160);
-            label1.Name = "label1";
-            label1.Size = new Size(0, 25);
-            label1.TabIndex = 13;
-            // 
             // Add_Costume
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -174,6 +174,7 @@
             Controls.Add(panel1);
             Name = "Add_Costume";
             Text = "Add_Costume";
+            Load += Add_Costume_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

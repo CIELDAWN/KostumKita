@@ -10,11 +10,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using KostumKita;
 using KostumKita.Model;
+using Npgsql;
 
 namespace KostumKita
 {
     public partial class KostumEntertainment : Form
     {
+        private string connStr = "Host=localhost;Username=postgres;Password=Sinta2074;Database=KostumKita";
+
         public KostumEntertainment()
         {
             InitializeComponent();
@@ -32,7 +35,7 @@ namespace KostumKita
             string aksi = (result == DialogResult.Yes) ? "membeli" : "menyewa";
 
             KeranjangContext keranjang = new KeranjangContext();
-            keranjang.TambahKeranjang(namaKostum, aksi);
+            keranjang.TambahKeranjangDariNama(namaKostum, aksi);
 
             MessageBox.Show($"{namaKostum} berhasil ditambahkan ke keranjang untuk {aksi.ToLower()}!", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -97,5 +100,141 @@ namespace KostumKita
         {
             HandleKlikKostum("Costume Sailor Moon");
         }
+
+        private void KostumEntertainment_Load(object sender, EventArgs e)
+        {
+            maincontainer.FlowDirection = FlowDirection.LeftToRight;
+            maincontainer.WrapContents = true;
+            maincontainer.AutoScroll = true;
+
+            LoadKostumEntertainmentMultiplePanels();
+        }
+
+        private void LoadKostumEntertainmentMultiplePanels()
+        {
+            try
+            {
+                maincontainer.Controls.Clear();
+
+                using (var conn = new NpgsqlConnection(connStr))
+                {
+                    conn.Open();
+                    string query = @"SELECT id_kostum_entertainment, gambar, nama_kostum, harga_sewa, harga_beli, jumlah_stok 
+                             FROM entertainment_costumes";
+                    using (var cmd = new NpgsqlCommand(query, conn))
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Image img = null;
+                            if (!reader.IsDBNull(reader.GetOrdinal("gambar")))
+                            {
+                                byte[] imgBytes = (byte[])reader["gambar"];
+                                using (MemoryStream ms = new MemoryStream(imgBytes))
+                                {
+                                    img = Image.FromStream(ms);
+                                }
+                            }
+
+                            string nama = reader["nama_kostum"].ToString();
+                            decimal hargaSewa = reader.GetDecimal(reader.GetOrdinal("harga_sewa"));
+                            decimal hargaBeli = reader.GetDecimal(reader.GetOrdinal("harga_beli"));
+                            string stok = reader["jumlah_stok"].ToString();
+
+                            // Panel utama untuk setiap produk
+                            Panel produkPanel = new Panel
+                            {
+                                Width = 350,
+                                Height = 180,
+                                BorderStyle = BorderStyle.FixedSingle,
+                                Margin = new Padding(10)
+                            };
+
+                            // PictureBox untuk gambar
+                            PictureBox pb = new PictureBox
+                            {
+                                Image = img,
+                                SizeMode = PictureBoxSizeMode.Zoom,
+                                Width = 120,
+                                Height = 120,
+                                Margin = new Padding(10),
+                                Left = 10,
+                                Top = 10
+                            };
+
+                            // Panel untuk info produk (nama, harga, stok)
+                            Panel infoPanel = new Panel
+                            {
+                                Width = 200,
+                                Height = 140,
+                                Margin = new Padding(10),
+                                Left = 140,
+                                Top = 10
+                            };
+
+                            Label lblNama = new Label
+                            {
+                                Text = nama,
+                                Font = new Font("Segoe UI", 10, FontStyle.Bold),
+                                ForeColor = Color.Black,
+                                AutoSize = true,
+                                Top = 0,
+                                Left = 0
+                            };
+
+                            Label lblHargaSewa = new Label
+                            {
+                                Text = "Harga Sewa: " + hargaSewa.ToString("C"),
+                                Font = new Font("Segoe UI", 9),
+                                ForeColor = Color.Black,
+                                AutoSize = true,
+                                Top = lblNama.Bottom + 5,
+                                Left = 0
+                            };
+
+                            Label lblHargaBeli = new Label
+                            {
+                                Text = "Harga Beli: " + hargaBeli.ToString("C"),
+                                Font = new Font("Segoe UI", 9),
+                                ForeColor = Color.Black,
+                                AutoSize = true,
+                                Top = lblHargaSewa.Bottom + 5,
+                                Left = 0
+                            };
+
+                            Label lblStok = new Label
+                            {
+                                Text = "Stok: " + stok,
+                                Font = new Font("Segoe UI", 9),
+                                ForeColor = Color.Black,
+                                AutoSize = true,
+                                Top = lblHargaBeli.Bottom + 5,
+                                Left = 0
+                            };
+
+                            infoPanel.Controls.Add(lblNama);
+                            infoPanel.Controls.Add(lblHargaSewa);
+                            infoPanel.Controls.Add(lblHargaBeli);
+                            infoPanel.Controls.Add(lblStok);
+
+                            produkPanel.Controls.Add(pb);
+                            produkPanel.Controls.Add(infoPanel);
+
+                            maincontainer.Controls.Add(produkPanel);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal memuat data: " + ex.Message);
+            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
+
