@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Transaksi));
             Home5 = new Button();
+            panel1 = new Panel();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // Home5
@@ -36,27 +39,39 @@
             Home5.BackColor = Color.LightCoral;
             Home5.Font = new Font("Britannic Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Home5.ForeColor = Color.White;
-            Home5.Location = new Point(12, 12);
+            Home5.Location = new Point(70, 143);
             Home5.Name = "Home5";
-            Home5.Size = new Size(112, 28);
+            Home5.Size = new Size(156, 34);
             Home5.TabIndex = 0;
             Home5.Text = "HOME";
             Home5.UseVisualStyleBackColor = false;
             Home5.Click += Home5_Click;
+            // 
+            // panel1
+            // 
+            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.BackgroundImageLayout = ImageLayout.Zoom;
+            panel1.Controls.Add(Home5);
+            panel1.Location = new Point(2, 2);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1366, 768);
+            panel1.TabIndex = 1;
             // 
             // Transaksi
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1350, 729);
-            Controls.Add(Home5);
+            Controls.Add(panel1);
             Name = "Transaksi";
             Text = "Transaksi";
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
         private Button Home5;
+        private Panel panel1;
     }
 }
