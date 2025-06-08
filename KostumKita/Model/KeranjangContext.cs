@@ -50,7 +50,7 @@ internal class KeranjangContext
             }
 
             // Masukkan ke tabel carts
-            string insertQuery = "INSERT INTO carts (id_kostum_tradisional, jenis_kostum, jumlah_item) VALUES (@id, @jenis, @jumlah)";
+            string insertQuery = "INSERT INTO carts (id_kostum_tradisional,jenis_kostum, jumlah_item) VALUES (@id, @jenis, @jumlah)";
             using (var cmd = new NpgsqlCommand(insertQuery, conn))
             {
                 cmd.Parameters.AddWithValue("id", id);

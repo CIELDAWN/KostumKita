@@ -12,6 +12,11 @@ namespace KostumKita
 {
     public partial class Keranjang : Form
     {
+        public Keranjang()
+        {
+            InitializeComponent();
+        }
+
         private void Home3_Click(object sender, EventArgs e)
         {
             HomepageKostumer homepageKostumerForm = new HomepageKostumer();

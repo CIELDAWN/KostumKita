@@ -80,8 +80,8 @@ namespace KostumKita
             {
                 conn.Open();
 
-                string query = "INSERT INTO carts (id_kostum_tradisional, jenis_kostum, jumlah_item) " +
-                               "VALUES (@id_kostum_tradisional, @jenis_kostum, @jumlah_item)";
+                string query = "INSERT INTO carts (id_kostum_tradisional,jenis_kostum, jumlah_item) " +
+                               "VALUES (@id_kostum_tradisional,jenis_kostum, @jumlah_item)";
 
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
@@ -90,10 +90,8 @@ namespace KostumKita
                     cmd.Parameters.AddWithValue("jumlah_item", jumlah);
                     cmd.ExecuteNonQuery();
                 }
-            }
-
+            }   
             MessageBox.Show("Kostum dimasukkan ke keranjang!");
-
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -248,8 +246,5 @@ namespace KostumKita
                 MessageBox.Show("Gagal memuat data: " + ex.Message);
             }
         }
-
-
     }
 }
-
