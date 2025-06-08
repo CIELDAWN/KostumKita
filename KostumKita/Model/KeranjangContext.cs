@@ -14,7 +14,7 @@ internal class KeranjangContext
 
     public KeranjangContext()
     {
-        conn = new NpgsqlConnection("Host=localhost;Port=5432;Username=postgres;Password=Sinta2074;Database=KostumKita");
+        conn = new NpgsqlConnection("Host=localhost;Port=5432;Username=postgres;Password=blackclover1;Database=KostumKita");
     }
 
     public void OpenConnection()

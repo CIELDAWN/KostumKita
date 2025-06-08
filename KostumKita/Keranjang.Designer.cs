@@ -35,7 +35,7 @@
             Home3.BackColor = Color.LightCoral;
             Home3.Font = new Font("Britannic Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Home3.ForeColor = Color.White;
-            Home3.Location = new Point(25, 12);
+            Home3.Location = new Point(12, 12);
             Home3.Name = "Home3";
             Home3.Size = new Size(104, 24);
             Home3.TabIndex = 0;

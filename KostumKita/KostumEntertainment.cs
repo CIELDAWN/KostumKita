@@ -16,28 +16,36 @@ namespace KostumKita
 {
     public partial class KostumEntertainment : Form
     {
-        private string connStr = "Host=localhost;Username=postgres;Password=Sinta2074;Database=KostumKita";
+        private string connStr = "Host=localhost;Username=postgres;Password=blackclover1;Database=KostumKita";
 
         public KostumEntertainment()
         {
             InitializeComponent();
         }
 
+        private void AddEntertainmentCostumeToCart(string namaKostum, string jenisTransaksi)
+        {
+            KeranjangContext keranjang = new KeranjangContext();
+            keranjang.TambahKeranjangDariNama(namaKostum, jenisTransaksi);
+            MessageBox.Show($"{namaKostum} berhasil ditambahkan ke keranjang untuk {jenisTransaksi}!",
+                            "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
         private void HandleKlikKostum(string namaKostum)
         {
             DialogResult result = MessageBox.Show(
-                $"Apakah Anda ingin membeli atau menyewa {namaKostum}?",
-                "Pilihan Transaksi",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question,
-                MessageBoxDefaultButton.Button1);
-
-            string aksi = (result == DialogResult.Yes) ? "membeli" : "menyewa";
-
-            KeranjangContext keranjang = new KeranjangContext();
-            keranjang.TambahKeranjangDariNama(namaKostum, aksi);
-
-            MessageBox.Show($"{namaKostum} berhasil ditambahkan ke keranjang untuk {aksi.ToLower()}!", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            $"Apakah Anda ingin membeli atau menyewa {namaKostum}?\nKlik Yes untuk 'Beli', No untuk 'Sewa'.",
+            "Pilihan Transaksi",
+            MessageBoxButtons.YesNoCancel,
+            MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                AddEntertainmentCostumeToCart(namaKostum, "beli");
+            }
+            else if (result == DialogResult.No)
+            {
+                AddEntertainmentCostumeToCart(namaKostum, "sewa");
+            }
         }
 
         private void Home_Click(object sender, EventArgs e)

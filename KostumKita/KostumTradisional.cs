@@ -15,7 +15,7 @@ namespace KostumKita
 {
     public partial class KostumTradisional : Form
     {
-        private string connStr = "Host=localhost;Username=postgres;Password=Sinta2074;Database=KostumKita";
+        private string connStr = "Host=localhost;Username=postgres;Password=blackclover1;Database=KostumKita";
 
         public KostumTradisional()
         {
@@ -121,27 +121,17 @@ namespace KostumKita
         {
 
         }
+
         private void HandleKlikKostum(string namaKostum)
         {
-            DialogResult result = MessageBox.Show(
-                $"Apakah Anda ingin menyewa dan menambahkan {namaKostum} kedalam keranjang?",
-                "Konfirmasi Sewa",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
+            string jenisTransaksi = "sewa";
 
-            if (result == DialogResult.Yes)
-            {
-                string aksi = "menyewa";
+            KeranjangContext keranjang = new KeranjangContext();
+            keranjang.TambahKeranjangDariNama(namaKostum, jenisTransaksi);
 
-                KeranjangContext keranjang = new KeranjangContext();
-                keranjang.TambahKeranjangDariNama(namaKostum, aksi);
-
-                MessageBox.Show($"{namaKostum} berhasil ditambahkan ke keranjang untuk {aksi}!",
-                                "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            MessageBox.Show($"{namaKostum} berhasil ditambahkan ke keranjang untuk penyewaan!",
+            "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
-        
 
         private void LoadKostumTradisionalMultiplePanels()
         {

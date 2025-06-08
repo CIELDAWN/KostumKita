@@ -13,7 +13,7 @@ namespace KostumKita.Model
         private readonly string connStr;
         public RegisterContext()
         {
-            connStr = "Host=localhost;Username=postgres;password=Sinta2074;Database=KostumKita;";
+            connStr = "Host=localhost;Username=postgres;password=blackclover1;Database=KostumKita;";
         }
         public bool Register(string username, DateTime tanggal_lahir, string email, string password)
         {
