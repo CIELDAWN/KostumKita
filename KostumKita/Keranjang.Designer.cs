@@ -30,6 +30,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Keranjang));
             Home3 = new Button();
             Panel1 = new Panel();
+            btnDeleteAllItem = new Button();
             button1 = new Button();
             rkeranjang = new Button();
             Transaksi4 = new Button();
@@ -58,6 +59,7 @@
             // 
             Panel1.BackgroundImage = (Image)resources.GetObject("Panel1.BackgroundImage");
             Panel1.BackgroundImageLayout = ImageLayout.Zoom;
+            Panel1.Controls.Add(btnDeleteAllItem);
             Panel1.Controls.Add(button1);
             Panel1.Controls.Add(rkeranjang);
             Panel1.Controls.Add(Transaksi4);
@@ -72,6 +74,19 @@
             Panel1.Size = new Size(1366, 768);
             Panel1.TabIndex = 1;
             Panel1.Paint += Panel1_Paint;
+            // 
+            // btnDeleteAllItem
+            // 
+            btnDeleteAllItem.BackColor = Color.LightCoral;
+            btnDeleteAllItem.Font = new Font("Britannic Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnDeleteAllItem.ForeColor = Color.White;
+            btnDeleteAllItem.Location = new Point(824, 624);
+            btnDeleteAllItem.Name = "btnDeleteAllItem";
+            btnDeleteAllItem.Size = new Size(146, 32);
+            btnDeleteAllItem.TabIndex = 4;
+            btnDeleteAllItem.Text = "Delete All Item";
+            btnDeleteAllItem.UseVisualStyleBackColor = false;
+            btnDeleteAllItem.Click += btnDeleteAllItem_Click;
             // 
             // button1
             // 
@@ -196,5 +211,6 @@
         private Button Live4;
         private Button button1;
         private Button rkeranjang;
+        private Button btnDeleteAllItem;
     }
 }

@@ -15,7 +15,7 @@ namespace KostumKita
 {
     public partial class KostumTradisional : Form
     {
-        private string connStr = "Host=localhost;Username=postgres;Password=Sinta2074;Database=KostumKita";
+        private string connStr = "Host=localhost;Username=postgres;Password=blackclover1;Database=KostumKita";
 
         public KostumTradisional()
         {
@@ -122,13 +122,22 @@ namespace KostumKita
 
         private void HandleKlikKostum(string namaKostum)
         {
-            string jenisTransaksi = "sewa";
+            // Karena ini form KostumTradisional, jenis kostum adalah "tradisional"
+            string jenisKostum = "tradisional";
 
-            KeranjangContext keranjang = new KeranjangContext();
-            keranjang.TambahKeranjangDariNama(namaKostum, jenisTransaksi);
+            try
+            {
+                KeranjangContext keranjang = new KeranjangContext();
+                keranjang.TambahKeranjangDariNama(namaKostum, jenisKostum);
 
-            MessageBox.Show($"{namaKostum} berhasil ditambahkan ke keranjang untuk penyewaan!",
-            "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"{namaKostum} berhasil ditambahkan ke keranjang untuk penyewaan!",
+                "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Gagal menambahkan {namaKostum} ke keranjang: {ex.Message}",
+                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void LoadKostumTradisionalMultiplePanels()

@@ -12,7 +12,7 @@ namespace KostumKita.Model
 
         public Add_Context()
         {
-            connStr = "Host = localhost; Username = postgres; Password = Sinta2074; Database = KostumKita";
+            connStr = "Host = localhost; Username = postgres; Password = blackclover1; Database = KostumKita";
         }
 
   

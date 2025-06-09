@@ -14,7 +14,7 @@ namespace KostumKita
 {
     public partial class Keranjang : Form
     {
-        private string connStr = "Host=localhost;Username=postgres;Password=Sinta2074;Database=KostumKita";
+        private string connStr = "Host=localhost;Username=postgres;Password=blackclover1;Database=KostumKita";
 
         public Keranjang()
         {
@@ -71,11 +71,11 @@ namespace KostumKita
 
         private void Keranjang_Load(object sender, EventArgs e)
         {
-            LoadKeranjangTradisionalEntertainmentPanels();
+            LoadKeranjang();
         }
 
 
-        private void LoadKeranjangTradisionalEntertainmentPanels()
+        private void LoadKeranjang()
         {
             try
             {
@@ -88,35 +88,32 @@ namespace KostumKita
                 {
                     conn.Open();
                     string query = @"
-                SELECT 
-                    c.id_cart, 
-                    c.jumlah_item, 
-                    t.nama_kostum, 
-                    t.asal_daerah, 
-                    t.harga_sewa, 
-                    t.gambar,
-                    'tradisional' AS sumber
-                FROM carts c
-                JOIN traditional_costumes t ON c.id_kostum_tradisional = t.id_kostum_tradisional
-                WHERE c.jenis_kostum = 'sewa'
+                    SELECT 
+                        c.id_cart, 
+                        c.jumlah_item, 
+                        t.nama_kostum, 
+                        t.asal_daerah, 
+                        t.harga_sewa, 
+                        t.gambar,
+                        'tradisional' AS sumber
+                    FROM carts c
+                    JOIN traditional_costumes t ON c.id_kostum_tradisional = t.id_kostum_tradisional
+                    WHERE c.jenis_kostum = 'TRADISIONAL'
 
-                UNION ALL
+                    UNION ALL
 
-                SELECT 
-                    c.id_cart, 
-                    c.jumlah_item, 
-                    c.jenis_kostum,
-                    e.nama_kostum, 
-                    e.harga_sewa, 
-                    e.harga_beli,
-                    e.gambar
-                FROM 
-                    carts c
-                JOIN 
-                    entertainment_costumes e ON c.id_kostum_entertainment = e.id_kostum_entertainment
-                WHERE 
-                    c.id_kostum_entertainment IS NOT NULL;
-                ";
+                    SELECT 
+                        c.id_cart, 
+                        c.jumlah_item, 
+                        e.nama_kostum, 
+                        'Entertainment' as asal_daerah,  -- ✅ Gunakan string literal
+                        e.harga_sewa, 
+                        e.gambar,
+                        'entertainment' AS sumber
+                    FROM carts c
+                    JOIN entertainment_costumes e ON c.id_kostum_entertainment = e.id_kostum_entertainment
+                    WHERE c.jenis_kostum = 'ENTERTAINMENT';
+";
 
                     using (var cmd = new NpgsqlCommand(query, conn))
                     using (var reader = cmd.ExecuteReader())
@@ -218,12 +215,29 @@ namespace KostumKita
 
         private void rkeranjang_Click(object sender, EventArgs e)
         {
-            LoadKeranjangTradisionalEntertainmentPanels();
+            LoadKeranjang();
         }
 
         private void Panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+
+        private void btnDeleteAllItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var keranjangContext = new KeranjangContext();
+                keranjangContext.HapusItemDariKeranjang("", ""); // trigger penghapusan semua item
+                MessageBox.Show("Semua item dalam keranjang berhasil dihapus.", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                LoadKeranjang();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Terjadi kesalahan: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 

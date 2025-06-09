@@ -16,7 +16,7 @@ namespace KostumKita
 {
     public partial class KostumEntertainment : Form
     {
-        private string connStr = "Host=localhost;Username=postgres;Password=Sinta2074;Database=KostumKita";
+        private string connStr = "Host=localhost;Username=postgres;Password=blackclover1;Database=KostumKita";
 
         public KostumEntertainment()
         {
@@ -25,10 +25,21 @@ namespace KostumKita
 
         private void AddEntertainmentCostumeToCart(string namaKostum, string jenisTransaksi)
         {
-            KeranjangContext keranjang = new KeranjangContext();
-            keranjang.TambahKeranjangDariNama(namaKostum, jenisTransaksi);
-            MessageBox.Show($"{namaKostum} berhasil ditambahkan ke keranjang untuk {jenisTransaksi}!",
-                            "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            try
+            {
+                KeranjangContext keranjang = new KeranjangContext();
+
+                // ✅ PERBAIKAN: Kirim "entertainment" sebagai jenis kostum dan status transaksi yang benar
+                keranjang.TambahKeranjangDariNama(namaKostum, "entertainment", jenisTransaksi.ToLower());
+
+                MessageBox.Show($"{namaKostum} berhasil ditambahkan ke keranjang untuk {jenisTransaksi}!",
+                                "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error menambahkan ke keranjang: {ex.Message}",
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void HandleKlikKostum(string namaKostum)
@@ -104,11 +115,6 @@ namespace KostumKita
             transaksiForm.WindowState = FormWindowState.Maximized;
             transaksiForm.Show();
             this.Hide();
-        }
-
-        private void btnSailorMoon_Click(object sender, EventArgs e)
-        {
-            HandleKlikKostum("Costume Sailor Moon");
         }
 
         private void KostumEntertainment_Load(object sender, EventArgs e)
