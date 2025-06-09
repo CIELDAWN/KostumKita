@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Remove_Costume));
             panel1 = new Panel();
+            button1 = new Button();
             l_Stock = new Label();
             l_Nama = new Label();
             l_asal = new Label();
@@ -42,7 +43,6 @@
             b_Manage_Sewa_Beli = new Button();
             b_Manage = new Button();
             b_Home = new Button();
-            button1 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -68,6 +68,19 @@
             panel1.Size = new Size(1366, 768);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.Maroon;
+            button1.Font = new Font("Britannic Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(848, 550);
+            button1.Name = "button1";
+            button1.Size = new Size(179, 51);
+            button1.TabIndex = 13;
+            button1.Text = "Cancel";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // l_Stock
             // 
@@ -148,6 +161,7 @@
             b_Manage_Transaksi.Size = new Size(154, 31);
             b_Manage_Transaksi.TabIndex = 3;
             b_Manage_Transaksi.UseVisualStyleBackColor = true;
+            b_Manage_Transaksi.Click += b_Manage_Transaksi_Click;
             // 
             // b_Manage_Sewa_Beli
             // 
@@ -158,6 +172,7 @@
             b_Manage_Sewa_Beli.Size = new Size(154, 44);
             b_Manage_Sewa_Beli.TabIndex = 2;
             b_Manage_Sewa_Beli.UseVisualStyleBackColor = true;
+            b_Manage_Sewa_Beli.Click += b_Manage_Sewa_Beli_Click;
             // 
             // b_Manage
             // 
@@ -180,18 +195,6 @@
             b_Home.TabIndex = 0;
             b_Home.UseVisualStyleBackColor = true;
             b_Home.Click += b_Home_Click;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.Maroon;
-            button1.Font = new Font("Britannic Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(848, 550);
-            button1.Name = "button1";
-            button1.Size = new Size(179, 51);
-            button1.TabIndex = 13;
-            button1.Text = "Cancel";
-            button1.UseVisualStyleBackColor = false;
             // 
             // Remove_Costume
             // 

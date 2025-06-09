@@ -15,7 +15,7 @@ namespace KostumKita
 {
     public partial class KostumTradisional : Form
     {
-        private string connStr = "Host=localhost;Username=postgres;Password=blackclover1;Database=KostumKita";
+        private string connStr = "Host=localhost;Username=postgres;Password=stanley;Database=KostumKita";
 
         public KostumTradisional()
         {

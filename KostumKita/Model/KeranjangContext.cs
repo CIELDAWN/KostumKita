@@ -12,7 +12,7 @@ internal class KeranjangContext
 
     public KeranjangContext()
     {
-        connectionString = "Host=localhost;Port=5432;Username=postgres;Password=blackclover1;Database=KostumKita";
+        connectionString = "Host=localhost;Port=5432;Username=postgres;Password=stanley;Database=KostumKita";
     }
 
     public void TambahKeranjangDariNama(string namaKostum, string jenisKostum, string statusTransaksi = "sewa")

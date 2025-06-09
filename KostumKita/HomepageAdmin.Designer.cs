@@ -75,6 +75,7 @@
             btnManageTransaksi.Text = "MANAGE TRANSAKSI";
             btnManageTransaksi.UseCompatibleTextRendering = true;
             btnManageTransaksi.UseVisualStyleBackColor = false;
+            btnManageTransaksi.Click += btnManageTransaksi_Click;
             // 
             // btnPembelianDanPenyewaan
             // 
@@ -87,6 +88,7 @@
             btnPembelianDanPenyewaan.TabIndex = 4;
             btnPembelianDanPenyewaan.Text = "MANAGE PEMBELIAN DAN PENYEWAAN";
             btnPembelianDanPenyewaan.UseVisualStyleBackColor = false;
+            btnPembelianDanPenyewaan.Click += btnPembelianDanPenyewaan_Click;
             // 
             // btnManageCostume
             // 

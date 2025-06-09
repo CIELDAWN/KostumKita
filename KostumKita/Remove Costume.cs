@@ -224,5 +224,27 @@ namespace KostumKita
         {
 
         }
+
+        private void b_Manage_Sewa_Beli_Click(object sender, EventArgs e)
+        {
+            ManagePembelianDanPenyewaan manage = new ManagePembelianDanPenyewaan();
+            manage.Show();
+            Hide();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ManageCostume manage = new ManageCostume();
+            manage.Show();
+            Hide();
+        }
+
+        private void b_Manage_Transaksi_Click(object sender, EventArgs e)
+        {
+            Laporan_Transaksi lapor = new Laporan_Transaksi();
+            lapor.Show();
+            Hide();
+        }
     }
 }

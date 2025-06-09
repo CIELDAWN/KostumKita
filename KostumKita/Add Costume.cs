@@ -14,7 +14,7 @@ namespace KostumKita
 {
     public partial class Add_Costume : Form
     {
-        private string connStr = "Host=localhost;Username=postgres;Password=Sinta2074;Database=KostumKita";
+        private string connStr = "Host=localhost;Username=postgres;Password=stanley;Database=KostumKita";
         public Add_Costume()
         {
             InitializeComponent();
@@ -139,6 +139,20 @@ namespace KostumKita
         private void Add_Costume_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void ManagePenyewaanPembelian_Click(object sender, EventArgs e)
+        {
+            ManagePembelianDanPenyewaan managePembelianDanPenyewaan = new ManagePembelianDanPenyewaan();
+            managePembelianDanPenyewaan.Show();
+            Hide();
+        }
+
+        private void ManageTransaksi_Click(object sender, EventArgs e)
+        {
+            Laporan_Transaksi laporan = new Laporan_Transaksi();
+            laporan.Show();
+            Hide();
         }
     }
 }

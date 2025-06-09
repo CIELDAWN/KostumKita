@@ -14,7 +14,7 @@ namespace KostumKita
 {
     public partial class Keranjang : Form
     {
-        private string connStr = "Host=localhost;Username=postgres;Password=blackclover1;Database=KostumKita";
+        private string connStr = "Host=localhost;Username=postgres;Password=stanley;Database=KostumKita";
 
         public Keranjang()
         {
@@ -98,7 +98,7 @@ namespace KostumKita
                         'tradisional' AS sumber
                     FROM carts c
                     JOIN traditional_costumes t ON c.id_kostum_tradisional = t.id_kostum_tradisional
-                    WHERE c.jenis_kostum = 'TRADISIONAL'
+                    
 
                     UNION ALL
 
@@ -112,7 +112,7 @@ namespace KostumKita
                         'entertainment' AS sumber
                     FROM carts c
                     JOIN entertainment_costumes e ON c.id_kostum_entertainment = e.id_kostum_entertainment
-                    WHERE c.jenis_kostum = 'ENTERTAINMENT';
+                    
 ";
 
                     using (var cmd = new NpgsqlCommand(query, conn))

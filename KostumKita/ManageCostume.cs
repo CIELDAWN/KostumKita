@@ -66,5 +66,19 @@ namespace KostumKita
             Hide();
             R.Show();
         }
+
+        private void b_Manage_Sewa_Beli_Click(object sender, EventArgs e)
+        {
+            ManagePembelianDanPenyewaan manage = new ManagePembelianDanPenyewaan();
+            manage.Show();
+            Hide();
+        }
+
+        private void b_Transaksi_Click(object sender, EventArgs e)
+        {
+            Laporan_Transaksi laporan = new Laporan_Transaksi();
+            laporan.Show();
+            Hide();
+        }
     }
 }

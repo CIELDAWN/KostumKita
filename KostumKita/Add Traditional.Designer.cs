@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Traditional));
             panel1 = new Panel();
+            button4 = new Button();
+            button3 = new Button();
+            button2 = new Button();
+            button1 = new Button();
             b_cancel = new Button();
             b_save = new Button();
             tb_stock = new TextBox();
@@ -38,10 +42,6 @@
             tb_nama = new TextBox();
             cb_category = new ComboBox();
             b_gambar = new Button();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -65,6 +65,58 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1366, 768);
             panel1.TabIndex = 0;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.LightCoral;
+            button4.Font = new Font("Britannic Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button4.ForeColor = Color.White;
+            button4.Location = new Point(74, 412);
+            button4.Name = "button4";
+            button4.Size = new Size(156, 36);
+            button4.TabIndex = 11;
+            button4.Text = "MANAGE TRANSAKSI";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.LightCoral;
+            button3.Font = new Font("Britannic Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(74, 316);
+            button3.Name = "button3";
+            button3.Size = new Size(154, 44);
+            button3.TabIndex = 10;
+            button3.Text = "MANAGE PENYEWAAN DAN PEMBELIAN";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.LightCoral;
+            button2.Font = new Font("Britannic Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(76, 231);
+            button2.Name = "button2";
+            button2.Size = new Size(154, 33);
+            button2.TabIndex = 9;
+            button2.Text = "MANAGE COSTUME";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.LightCoral;
+            button1.Font = new Font("Britannic Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(76, 143);
+            button1.Name = "button1";
+            button1.Size = new Size(154, 31);
+            button1.TabIndex = 8;
+            button1.Text = "HOME";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // b_cancel
             // 
@@ -134,54 +186,6 @@
             b_gambar.TabIndex = 0;
             b_gambar.UseVisualStyleBackColor = true;
             b_gambar.Click += b_gambar_Click;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.LightCoral;
-            button1.Font = new Font("Britannic Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(76, 143);
-            button1.Name = "button1";
-            button1.Size = new Size(154, 31);
-            button1.TabIndex = 8;
-            button1.Text = "HOME";
-            button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.LightCoral;
-            button2.Font = new Font("Britannic Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(76, 231);
-            button2.Name = "button2";
-            button2.Size = new Size(154, 33);
-            button2.TabIndex = 9;
-            button2.Text = "MANAGE COSTUME";
-            button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.LightCoral;
-            button3.Font = new Font("Britannic Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(74, 316);
-            button3.Name = "button3";
-            button3.Size = new Size(154, 44);
-            button3.TabIndex = 10;
-            button3.Text = "MANAGE PENYEWAAN DAN PEMBELIAN";
-            button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            button4.BackColor = Color.LightCoral;
-            button4.Font = new Font("Britannic Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button4.ForeColor = Color.White;
-            button4.Location = new Point(74, 412);
-            button4.Name = "button4";
-            button4.Size = new Size(156, 36);
-            button4.TabIndex = 11;
-            button4.Text = "MANAGE TRANSAKSI";
-            button4.UseVisualStyleBackColor = false;
             // 
             // Add_Traditional
             // 

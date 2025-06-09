@@ -1,4 +1,5 @@
-﻿using Npgsql;
+﻿using KostumKita;
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,7 @@ namespace KostumKita
 {
     public partial class Add_Traditional : Form
     {
-        private string connStr = "Host=localhost;Username=postgres;Password=Sinta2074;Database=KostumKita";
+        private string connStr = "Host=localhost;Username=postgres;Password=stanley;Database=KostumKita";
         public Add_Traditional()
         {
             InitializeComponent();
@@ -49,7 +50,7 @@ namespace KostumKita
         private void cb_category_SelectedIndexChanged(object sender, EventArgs e)
         {
             Add_Costume Entert = new Add_Costume();
-            
+
             cb_category.DropDownStyle = ComboBoxStyle.DropDownList;
             string kategori = cb_category.SelectedItem?.ToString();
 
@@ -63,7 +64,7 @@ namespace KostumKita
             }
             else if (kategori == "Entertainment")
             {
-               
+
                 Entert.Show();
                 this.Hide();
             }
@@ -111,6 +112,34 @@ namespace KostumKita
                 image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
                 return ms.ToArray();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            HomepageAdmin homepage = new HomepageAdmin();
+            homepage.Show();
+            Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ManageCostume manage = new ManageCostume();
+            manage.Show();
+            Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ManagePembelianDanPenyewaan managePembelianDanPenyewaan = new ManagePembelianDanPenyewaan();
+            managePembelianDanPenyewaan.Show();
+            Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Laporan_Transaksi laporan = new Laporan_Transaksi();
+            laporan.Show();
+            Hide();
         }
     }
 }

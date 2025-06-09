@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Costume));
             panel1 = new Panel();
+            ManageTransaksi = new Button();
+            ManagePenyewaanPembelian = new Button();
             label1 = new Label();
             cb_category = new ComboBox();
             tb_Sewa = new TextBox();
@@ -41,8 +43,6 @@
             b_PilihGambar = new Button();
             b_Manage = new Button();
             b_Home = new Button();
-            ManagePenyewaanPembelian = new Button();
-            ManageTransaksi = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -67,6 +67,32 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1366, 768);
             panel1.TabIndex = 0;
+            // 
+            // ManageTransaksi
+            // 
+            ManageTransaksi.BackColor = Color.LightCoral;
+            ManageTransaksi.Font = new Font("Britannic Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ManageTransaksi.ForeColor = Color.White;
+            ManageTransaksi.Location = new Point(74, 413);
+            ManageTransaksi.Name = "ManageTransaksi";
+            ManageTransaksi.Size = new Size(157, 33);
+            ManageTransaksi.TabIndex = 15;
+            ManageTransaksi.Text = "MANAGE TRANSAKSI";
+            ManageTransaksi.UseVisualStyleBackColor = false;
+            ManageTransaksi.Click += ManageTransaksi_Click;
+            // 
+            // ManagePenyewaanPembelian
+            // 
+            ManagePenyewaanPembelian.BackColor = Color.LightCoral;
+            ManagePenyewaanPembelian.Font = new Font("Britannic Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ManagePenyewaanPembelian.ForeColor = Color.White;
+            ManagePenyewaanPembelian.Location = new Point(74, 318);
+            ManagePenyewaanPembelian.Name = "ManagePenyewaanPembelian";
+            ManagePenyewaanPembelian.Size = new Size(157, 40);
+            ManagePenyewaanPembelian.TabIndex = 14;
+            ManagePenyewaanPembelian.Text = "MANAGE PENYEWAAN DAN PEMBELIAN";
+            ManagePenyewaanPembelian.UseVisualStyleBackColor = false;
+            ManagePenyewaanPembelian.Click += ManagePenyewaanPembelian_Click;
             // 
             // label1
             // 
@@ -175,30 +201,6 @@
             b_Home.Text = "HOME";
             b_Home.UseVisualStyleBackColor = false;
             b_Home.Click += b_Home_Click;
-            // 
-            // ManagePenyewaanPembelian
-            // 
-            ManagePenyewaanPembelian.BackColor = Color.LightCoral;
-            ManagePenyewaanPembelian.Font = new Font("Britannic Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ManagePenyewaanPembelian.ForeColor = Color.White;
-            ManagePenyewaanPembelian.Location = new Point(74, 318);
-            ManagePenyewaanPembelian.Name = "ManagePenyewaanPembelian";
-            ManagePenyewaanPembelian.Size = new Size(157, 40);
-            ManagePenyewaanPembelian.TabIndex = 14;
-            ManagePenyewaanPembelian.Text = "MANAGE PENYEWAAN DAN PEMBELIAN";
-            ManagePenyewaanPembelian.UseVisualStyleBackColor = false;
-            // 
-            // ManageTransaksi
-            // 
-            ManageTransaksi.BackColor = Color.LightCoral;
-            ManageTransaksi.Font = new Font("Britannic Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ManageTransaksi.ForeColor = Color.White;
-            ManageTransaksi.Location = new Point(74, 413);
-            ManageTransaksi.Name = "ManageTransaksi";
-            ManageTransaksi.Size = new Size(157, 33);
-            ManageTransaksi.TabIndex = 15;
-            ManageTransaksi.Text = "MANAGE TRANSAKSI";
-            ManageTransaksi.UseVisualStyleBackColor = false;
             // 
             // Add_Costume
             // 

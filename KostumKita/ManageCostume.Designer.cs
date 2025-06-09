@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageCostume));
             panel1 = new Panel();
+            b_Transaksi = new Button();
+            b_Manage_Sewa_Beli = new Button();
             b_manage_Cos = new Button();
             b_Remove = new Button();
             b_Add = new Button();
             b_Manage = new Button();
             b_Home = new Button();
             b_exit = new Button();
-            b_Manage_Sewa_Beli = new Button();
-            b_Transaksi = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -58,6 +58,27 @@
             panel1.Size = new Size(1366, 768);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
+            // 
+            // b_Transaksi
+            // 
+            b_Transaksi.BackgroundImage = (Image)resources.GetObject("b_Transaksi.BackgroundImage");
+            b_Transaksi.Location = new Point(73, 414);
+            b_Transaksi.Name = "b_Transaksi";
+            b_Transaksi.Size = new Size(155, 32);
+            b_Transaksi.TabIndex = 7;
+            b_Transaksi.UseVisualStyleBackColor = true;
+            b_Transaksi.Click += b_Transaksi_Click;
+            // 
+            // b_Manage_Sewa_Beli
+            // 
+            b_Manage_Sewa_Beli.BackgroundImage = (Image)resources.GetObject("b_Manage_Sewa_Beli.BackgroundImage");
+            b_Manage_Sewa_Beli.BackgroundImageLayout = ImageLayout.Center;
+            b_Manage_Sewa_Beli.Location = new Point(73, 320);
+            b_Manage_Sewa_Beli.Name = "b_Manage_Sewa_Beli";
+            b_Manage_Sewa_Beli.Size = new Size(155, 38);
+            b_Manage_Sewa_Beli.TabIndex = 6;
+            b_Manage_Sewa_Beli.UseVisualStyleBackColor = true;
+            b_Manage_Sewa_Beli.Click += b_Manage_Sewa_Beli_Click;
             // 
             // b_manage_Cos
             // 
@@ -120,25 +141,6 @@
             b_exit.TabIndex = 0;
             b_exit.UseVisualStyleBackColor = true;
             b_exit.Click += b_exit_Click;
-            // 
-            // b_Manage_Sewa_Beli
-            // 
-            b_Manage_Sewa_Beli.BackgroundImage = (Image)resources.GetObject("b_Manage_Sewa_Beli.BackgroundImage");
-            b_Manage_Sewa_Beli.BackgroundImageLayout = ImageLayout.Center;
-            b_Manage_Sewa_Beli.Location = new Point(73, 320);
-            b_Manage_Sewa_Beli.Name = "b_Manage_Sewa_Beli";
-            b_Manage_Sewa_Beli.Size = new Size(155, 38);
-            b_Manage_Sewa_Beli.TabIndex = 6;
-            b_Manage_Sewa_Beli.UseVisualStyleBackColor = true;
-            // 
-            // b_Transaksi
-            // 
-            b_Transaksi.BackgroundImage = (Image)resources.GetObject("b_Transaksi.BackgroundImage");
-            b_Transaksi.Location = new Point(73, 414);
-            b_Transaksi.Name = "b_Transaksi";
-            b_Transaksi.Size = new Size(155, 32);
-            b_Transaksi.TabIndex = 7;
-            b_Transaksi.UseVisualStyleBackColor = true;
             // 
             // ManageCostume
             // 
