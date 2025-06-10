@@ -9,12 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Npgsql;
+using KostumKita.Model;
 
 namespace KostumKita
 {
     public partial class Keranjang : Form
     {
-        private string connStr = "Host=localhost;Username=postgres;Password=stanley;Database=KostumKita";
+        private string connStr = "Host=localhost;Username=postgres;Password=blackclover1;Database=KostumKita";
 
         public Keranjang()
         {
