@@ -118,26 +118,40 @@ namespace KostumKita
 
                 string kodePembayaran = transaksiContext.GenerateKodePembayaran(bankTerpilih);
 
-                // Simpan transaksi ke database
-                transaksiContext.SimpanTransaksi(itemsKeranjang, $"{metodePembayaran} - {bankTerpilih}", kodePembayaran);
+                // Cek apakah ada item yang disewa
+                bool adaItemSewa = itemsKeranjang.Any(item => item.StatusTransaksi.ToLower().Contains("sewa"));
 
-                // Tampilkan konfirmasi pembayaran
-                decimal totalHarga = transaksiContext.GetTotalHargaKeseluruhan();
-                string pesanKonfirmasi = $"Pembayaran Berhasil!\n\n" +
-                    $"Metode: {metodePembayaran}\n" +
-                    $"Bank: {bankTerpilih}\n" +
-                    $"Kode Pembayaran: {kodePembayaran}\n" +
-                    $"Total: Rp {totalHarga:N0}\n\n" +
-                    $"Silakan lakukan pembayaran sesuai kode di atas.";
+                if (adaItemSewa)
+                {
+                    // Jika ada item sewa, arahkan ke form MOU
+                    this.Hide();
+                    MOU mouForm = new MOU(itemsKeranjang, $"{metodePembayaran} - {bankTerpilih}", bankTerpilih, kodePembayaran);
+                    mouForm.Show();
+                }
+                else
+                {
+                    // Jika tidak ada item sewa, proses transaksi langsung
+                    // Simpan transaksi ke database
+                    transaksiContext.SimpanTransaksi(itemsKeranjang, $"{metodePembayaran} - {bankTerpilih}", kodePembayaran);
 
-                MessageBox.Show(pesanKonfirmasi, "Konfirmasi Pembayaran",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Tampilkan konfirmasi pembayaran
+                    decimal totalHarga = transaksiContext.GetTotalHargaKeseluruhan();
+                    string pesanKonfirmasi = $"Pembayaran Berhasil!\n\n" +
+                        $"Metode: {metodePembayaran}\n" +
+                        $"Bank: {bankTerpilih}\n" +
+                        $"Kode Pembayaran: {kodePembayaran}\n" +
+                        $"Total: Rp {totalHarga:N0}\n\n" +
+                        $"Silakan lakukan pembayaran sesuai kode di atas.";
 
-                // Bersihkan keranjang setelah transaksi berhasil
-                BersihkanKeranjang();
+                    MessageBox.Show(pesanKonfirmasi, "Konfirmasi Pembayaran",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Reload data
-                LoadItemsKeranjang();
+                    // Bersihkan keranjang setelah transaksi berhasil
+                    BersihkanKeranjang();
+
+                    // Reload data
+                    LoadItemsKeranjang();
+                }
             }
             catch (Exception ex)
             {
