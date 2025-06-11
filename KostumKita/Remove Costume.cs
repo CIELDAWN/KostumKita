@@ -13,7 +13,7 @@ namespace KostumKita
 {
     public partial class Remove_Costume : Form
     {
-        private string connStr = "Host=localhost;Username=postgres;Password=Sinta2074;Database=KostumKita";
+        private string connStr = "Host=localhost;Username=postgres;Password=stanley;Database=KostumKita";
 
         public Remove_Costume()
         {

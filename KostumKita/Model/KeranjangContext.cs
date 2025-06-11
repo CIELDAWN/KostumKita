@@ -14,7 +14,7 @@ namespace KostumKita.Model // Tambahkan namespace yang sesuai
 
         public KeranjangContext()
         {
-            connectionString = "Host=localhost;Port=5432;Username=postgres;Password=Sinta2074;Database=KostumKita";
+            connectionString = "Host=localhost;Port=5432;Username=postgres;Password=stanley;Database=KostumKita";
         }
 
         public void TambahKeranjangDariNama(string namaKostum, string jenisKostum, string statusTransaksi = "sewa")
