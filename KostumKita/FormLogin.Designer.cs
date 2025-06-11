@@ -114,6 +114,7 @@
             Controls.Add(panel1);
             Name = "FormLogin";
             Text = "Login";
+            Load += FormLogin_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

@@ -15,7 +15,7 @@ namespace KostumKita
         public ManagePembelianDanPenyewaan()
         {
             InitializeComponent();
-            db = new DatabaseManager("Host=localhost;Username=postgres;Password=stanley;Database=KostumKita");
+            db = new DatabaseManager("Host=localhost;Username=postgres;Password=Sinta2074;Database=KostumKita");
             this.Load += ManagePembelianDanPenyewaan_Load;
         }
 
@@ -75,6 +75,11 @@ namespace KostumKita
             HomepageAdmin admin = new HomepageAdmin();
             admin.Show();
             Hide();
+        }
+
+        private void ManagePembelianDanPenyewaan_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

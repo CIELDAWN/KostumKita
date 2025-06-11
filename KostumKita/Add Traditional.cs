@@ -14,7 +14,7 @@ namespace KostumKita
 {
     public partial class Add_Traditional : Form
     {
-        private string connStr = "Host=localhost;Username=postgres;Password=stanley;Database=KostumKita";
+        private string connStr = "Host=localhost;Username=postgres;Password=Sinta2074;Database=KostumKita";
         public Add_Traditional()
         {
             InitializeComponent();
@@ -140,6 +140,11 @@ namespace KostumKita
             Laporan_Transaksi laporan = new Laporan_Transaksi();
             laporan.Show();
             Hide();
+        }
+
+        private void Add_Traditional_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

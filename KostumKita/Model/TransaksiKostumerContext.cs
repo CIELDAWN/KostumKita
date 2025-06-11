@@ -24,7 +24,7 @@ namespace KostumKita.Model
 
         public TransaksiKostumerContext()
         {
-            connectionString = "Host=localhost;Port=5432;Username=postgres;Password=blackclover1;Database=KostumKita";
+            connectionString = "Host=localhost;Port=5432;Username=postgres;Password=Sinta2074;Database=KostumKita";
         }
 
         // Method untuk mendapatkan semua item di keranjang

@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagePembelianDanPenyewaan));
             panel1 = new Panel();
+            b_Transaksi = new Button();
+            b_Sewa_Beli = new Button();
+            b_Costume = new Button();
+            b_Home = new Button();
             b_cancel = new Button();
             b_save = new Button();
             dataGridView1 = new DataGridView();
-            b_Home = new Button();
-            b_Costume = new Button();
-            b_Sewa_Beli = new Button();
-            b_Transaksi = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -55,6 +55,46 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1366, 768);
             panel1.TabIndex = 0;
+            // 
+            // b_Transaksi
+            // 
+            b_Transaksi.BackgroundImage = (Image)resources.GetObject("b_Transaksi.BackgroundImage");
+            b_Transaksi.BackgroundImageLayout = ImageLayout.Center;
+            b_Transaksi.Location = new Point(75, 414);
+            b_Transaksi.Name = "b_Transaksi";
+            b_Transaksi.Size = new Size(156, 34);
+            b_Transaksi.TabIndex = 6;
+            b_Transaksi.UseVisualStyleBackColor = true;
+            // 
+            // b_Sewa_Beli
+            // 
+            b_Sewa_Beli.BackgroundImage = (Image)resources.GetObject("b_Sewa_Beli.BackgroundImage");
+            b_Sewa_Beli.BackgroundImageLayout = ImageLayout.Center;
+            b_Sewa_Beli.Location = new Point(75, 319);
+            b_Sewa_Beli.Name = "b_Sewa_Beli";
+            b_Sewa_Beli.Size = new Size(156, 42);
+            b_Sewa_Beli.TabIndex = 5;
+            b_Sewa_Beli.UseVisualStyleBackColor = true;
+            // 
+            // b_Costume
+            // 
+            b_Costume.BackgroundImage = (Image)resources.GetObject("b_Costume.BackgroundImage");
+            b_Costume.BackgroundImageLayout = ImageLayout.Center;
+            b_Costume.Location = new Point(75, 228);
+            b_Costume.Name = "b_Costume";
+            b_Costume.Size = new Size(156, 34);
+            b_Costume.TabIndex = 4;
+            b_Costume.UseVisualStyleBackColor = true;
+            // 
+            // b_Home
+            // 
+            b_Home.BackgroundImage = (Image)resources.GetObject("b_Home.BackgroundImage");
+            b_Home.BackgroundImageLayout = ImageLayout.Center;
+            b_Home.Location = new Point(75, 141);
+            b_Home.Name = "b_Home";
+            b_Home.Size = new Size(155, 33);
+            b_Home.TabIndex = 3;
+            b_Home.UseVisualStyleBackColor = true;
             // 
             // b_cancel
             // 
@@ -86,46 +126,6 @@
             dataGridView1.Size = new Size(644, 331);
             dataGridView1.TabIndex = 0;
             // 
-            // b_Home
-            // 
-            b_Home.BackgroundImage = (Image)resources.GetObject("b_Home.BackgroundImage");
-            b_Home.BackgroundImageLayout = ImageLayout.Center;
-            b_Home.Location = new Point(75, 141);
-            b_Home.Name = "b_Home";
-            b_Home.Size = new Size(155, 33);
-            b_Home.TabIndex = 3;
-            b_Home.UseVisualStyleBackColor = true;
-            // 
-            // b_Costume
-            // 
-            b_Costume.BackgroundImage = (Image)resources.GetObject("b_Costume.BackgroundImage");
-            b_Costume.BackgroundImageLayout = ImageLayout.Center;
-            b_Costume.Location = new Point(75, 228);
-            b_Costume.Name = "b_Costume";
-            b_Costume.Size = new Size(156, 34);
-            b_Costume.TabIndex = 4;
-            b_Costume.UseVisualStyleBackColor = true;
-            // 
-            // b_Sewa_Beli
-            // 
-            b_Sewa_Beli.BackgroundImage = (Image)resources.GetObject("b_Sewa_Beli.BackgroundImage");
-            b_Sewa_Beli.BackgroundImageLayout = ImageLayout.Center;
-            b_Sewa_Beli.Location = new Point(75, 319);
-            b_Sewa_Beli.Name = "b_Sewa_Beli";
-            b_Sewa_Beli.Size = new Size(156, 42);
-            b_Sewa_Beli.TabIndex = 5;
-            b_Sewa_Beli.UseVisualStyleBackColor = true;
-            // 
-            // b_Transaksi
-            // 
-            b_Transaksi.BackgroundImage = (Image)resources.GetObject("b_Transaksi.BackgroundImage");
-            b_Transaksi.BackgroundImageLayout = ImageLayout.Center;
-            b_Transaksi.Location = new Point(75, 414);
-            b_Transaksi.Name = "b_Transaksi";
-            b_Transaksi.Size = new Size(156, 34);
-            b_Transaksi.TabIndex = 6;
-            b_Transaksi.UseVisualStyleBackColor = true;
-            // 
             // ManagePembelianDanPenyewaan
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -134,6 +134,7 @@
             Controls.Add(panel1);
             Name = "ManagePembelianDanPenyewaan";
             Text = "Form1";
+            Load += ManagePembelianDanPenyewaan_Load_1;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

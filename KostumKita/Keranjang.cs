@@ -15,7 +15,7 @@ namespace KostumKita
 {
     public partial class Keranjang : Form
     {
-        private string connStr = "Host=localhost;Username=postgres;Password=blackclover1;Database=KostumKita";
+        private string connStr = "Host=localhost;Username=postgres;Password=Sinta2074;Database=KostumKita";
 
         public Keranjang()
         {
@@ -94,7 +94,6 @@ namespace KostumKita
                         c.jumlah_item, 
                         t.nama_kostum, 
                         t.asal_daerah, 
-                        t.harga_sewa, 
                         t.gambar,
                         'tradisional' AS sumber
                     FROM carts c
@@ -108,7 +107,6 @@ namespace KostumKita
                         c.jumlah_item, 
                         e.nama_kostum, 
                         'Entertainment' as asal_daerah,  -- ✅ Gunakan string literal
-                        e.harga_sewa, 
                         e.gambar,
                         'entertainment' AS sumber
                     FROM carts c
@@ -137,7 +135,6 @@ namespace KostumKita
 
                             string nama = reader["nama_kostum"].ToString();
                             string asal = reader["asal_daerah"].ToString(); // bisa asal daerah atau tema acara
-                            decimal harga = reader.GetDecimal(reader.GetOrdinal("harga_sewa"));
                             int jumlah = reader.GetInt32(reader.GetOrdinal("jumlah_item"));
 
                             Panel panelKeranjang = new Panel
@@ -175,26 +172,17 @@ namespace KostumKita
                                 Left = 120
                             };
 
-                            Label lblHarga = new Label
-                            {
-                                Text = "Harga: " + harga.ToString("C"),
-                                AutoSize = true,
-                                Top = lblAsal.Bottom + 5,
-                                Left = 120
-                            };
-
                             Label lblJumlah = new Label
                             {
                                 Text = "Jumlah: " + jumlah.ToString(),
                                 AutoSize = true,
-                                Top = lblHarga.Bottom + 5,
+                                Top = lblAsal.Bottom + 5, // posisi setelah lblAsal
                                 Left = 120
                             };
 
                             panelKeranjang.Controls.Add(pb);
                             panelKeranjang.Controls.Add(lblNama);
                             panelKeranjang.Controls.Add(lblAsal);
-                            panelKeranjang.Controls.Add(lblHarga);
                             panelKeranjang.Controls.Add(lblJumlah);
 
                             maincontainer.Controls.Add(panelKeranjang);
@@ -239,6 +227,14 @@ namespace KostumKita
             {
                 MessageBox.Show($"Terjadi kesalahan: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Transaksi transaksiForm = new Transaksi();
+            transaksiForm.WindowState = FormWindowState.Maximized;
+            transaksiForm.Show();
+            this.Hide();
         }
     }
 

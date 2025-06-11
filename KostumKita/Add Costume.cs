@@ -14,7 +14,7 @@ namespace KostumKita
 {
     public partial class Add_Costume : Form
     {
-        private string connStr = "Host=localhost;Username=postgres;Password=stanley;Database=KostumKita";
+        private string connStr = "Host=localhost;Username=postgres;Password=Sinta2074;Database=KostumKita";
         public Add_Costume()
         {
             InitializeComponent();

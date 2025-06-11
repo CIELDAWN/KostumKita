@@ -180,6 +180,9 @@ namespace KostumKita
             try
             {
                 // Navigasi ke form Home
+                HomepageKostumer homepageKostumerForm = new HomepageKostumer();
+                homepageKostumerForm.WindowState = FormWindowState.Maximized;
+                homepageKostumerForm.Show();
                 this.Hide();
                 // Form home = new Home(); // Sesuaikan dengan nama class form Home Anda
                 // home.Show();
@@ -196,6 +199,9 @@ namespace KostumKita
             try
             {
                 // Navigasi ke form Kostum Tradisional
+                KostumTradisional kostumTradisionalForm = new KostumTradisional();
+                kostumTradisionalForm.WindowState = FormWindowState.Maximized;
+                kostumTradisionalForm.Show();
                 this.Hide();
                 // Form kostumTradisional = new KostumTradisional(); // Sesuaikan dengan nama class
                 // kostumTradisional.Show();
@@ -212,6 +218,9 @@ namespace KostumKita
             try
             {
                 // Navigasi ke form Kostum Entertainment
+                KostumEntertainment kostumEntertainmentForm = new KostumEntertainment();
+                kostumEntertainmentForm.WindowState = FormWindowState.Maximized;
+                kostumEntertainmentForm.Show();
                 this.Hide();
                 // Form kostumEntertainment = new KostumEntertainment(); // Sesuaikan dengan nama class
                 // kostumEntertainment.Show();
@@ -228,6 +237,9 @@ namespace KostumKita
             try
             {
                 // Navigasi ke form Live
+                Live LiveForm = new Live();
+                LiveForm.WindowState = FormWindowState.Maximized;
+                LiveForm.Show();
                 this.Hide();
                 // Form live = new Live(); // Sesuaikan dengan nama class
                 // live.Show();
@@ -244,6 +256,9 @@ namespace KostumKita
             try
             {
                 // Navigasi ke form Keranjang
+                Keranjang keranjangForm = new Keranjang();
+                keranjangForm.WindowState = FormWindowState.Maximized;
+                keranjangForm.Show();
                 this.Hide();
                 // Form keranjang = new Keranjang(); // Sesuaikan dengan nama class
                 // keranjang.Show();
@@ -272,6 +287,11 @@ namespace KostumKita
             {
                 // Dispose context jika ada method dispose
             }
+        }
+
+        private void Transaksi_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

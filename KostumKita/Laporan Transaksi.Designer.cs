@@ -112,6 +112,7 @@
             Controls.Add(panel1);
             Name = "Laporan_Transaksi";
             Text = "Laporan_Transaksi";
+            Load += Laporan_Transaksi_Load_1;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

@@ -195,6 +195,7 @@
             Controls.Add(panel1);
             Name = "Add_Traditional";
             Text = "Add_Traditional";
+            Load += Add_Traditional_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

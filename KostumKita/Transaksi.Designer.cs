@@ -31,17 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Transaksi));
             Home5 = new Button();
             panel1 = new Panel();
+            textBox1 = new TextBox();
+            label1 = new Label();
+            button1 = new Button();
+            bank = new ComboBox();
+            metodepembayaran = new ComboBox();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             Transaksi4 = new Button();
             Keranjang4 = new Button();
             Live = new Button();
             KostumEntertainment = new Button();
             KostumTradisional5 = new Button();
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            metodepembayaran = new ComboBox();
-            bank = new ComboBox();
-            button1 = new Button();
-            label1 = new Label();
-            textBox1 = new TextBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -78,6 +78,57 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1366, 768);
             panel1.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(560, 441);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(196, 23);
+            textBox1.TabIndex = 11;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(560, 441);
+            label1.Name = "label1";
+            label1.Size = new Size(0, 15);
+            label1.TabIndex = 10;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(1164, 440);
+            button1.Name = "button1";
+            button1.Size = new Size(172, 52);
+            button1.TabIndex = 9;
+            button1.Text = "Konfirmasi Pembayaran";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // bank
+            // 
+            bank.FormattingEnabled = true;
+            bank.Items.AddRange(new object[] { "BRI", "BCA", "BNI" });
+            bank.Location = new Point(309, 469);
+            bank.Name = "bank";
+            bank.Size = new Size(228, 23);
+            bank.TabIndex = 8;
+            bank.Text = "Pilihan Bank";
+            // 
+            // metodepembayaran
+            // 
+            metodepembayaran.FormattingEnabled = true;
+            metodepembayaran.Items.AddRange(new object[] { "Virtual Account", "Transfer Bank" });
+            metodepembayaran.Location = new Point(309, 440);
+            metodepembayaran.Name = "metodepembayaran";
+            metodepembayaran.Size = new Size(228, 23);
+            metodepembayaran.TabIndex = 7;
+            metodepembayaran.Text = "Metode Pembayaran";
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.Location = new Point(287, 102);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(1060, 321);
+            flowLayoutPanel1.TabIndex = 6;
             // 
             // Transaksi4
             // 
@@ -144,57 +195,6 @@
             KostumTradisional5.UseVisualStyleBackColor = false;
             KostumTradisional5.Click += KostumTradisional5_Click;
             // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.Location = new Point(287, 102);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1060, 321);
-            flowLayoutPanel1.TabIndex = 6;
-            // 
-            // metodepembayaran
-            // 
-            metodepembayaran.FormattingEnabled = true;
-            metodepembayaran.Items.AddRange(new object[] { "Virtual Account", "Transfer Bank" });
-            metodepembayaran.Location = new Point(309, 440);
-            metodepembayaran.Name = "metodepembayaran";
-            metodepembayaran.Size = new Size(228, 23);
-            metodepembayaran.TabIndex = 7;
-            metodepembayaran.Text = "Metode Pembayaran";
-            // 
-            // bank
-            // 
-            bank.FormattingEnabled = true;
-            bank.Items.AddRange(new object[] { "BRI", "BCA", "BNI" });
-            bank.Location = new Point(309, 469);
-            bank.Name = "bank";
-            bank.Size = new Size(228, 23);
-            bank.TabIndex = 8;
-            bank.Text = "Pilihan Bank";
-            // 
-            // button1
-            // 
-            button1.Location = new Point(1164, 440);
-            button1.Name = "button1";
-            button1.Size = new Size(172, 52);
-            button1.TabIndex = 9;
-            button1.Text = "Konfirmasi Pembayaran";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(560, 441);
-            label1.Name = "label1";
-            label1.Size = new Size(0, 15);
-            label1.TabIndex = 10;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(560, 441);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(196, 23);
-            textBox1.TabIndex = 11;
-            // 
             // Transaksi
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -203,6 +203,7 @@
             Controls.Add(panel1);
             Name = "Transaksi";
             Text = "Transaksi";
+            Load += Transaksi_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

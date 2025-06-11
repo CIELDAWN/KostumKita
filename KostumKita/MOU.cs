@@ -136,5 +136,10 @@ namespace KostumKita
                 // Dispose context jika ada method dispose
             }
         }
+
+        private void MOU_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -24,7 +24,7 @@ namespace KostumKita
         {
 
             InitializeComponent();
-            db = new TransaksiContext.LaporanData("Host=localhost;Username=postgres;Password=stanley;Database=KostumKita");
+            db = new TransaksiContext.LaporanData("Host=localhost;Username=postgres;Password=Sinta2074;Database=KostumKita");
             this.Load += Laporan_Transaksi_Load;
         }
 
@@ -105,6 +105,11 @@ namespace KostumKita
             Laporan_Transaksi lapor = new Laporan_Transaksi();
             lapor.Show();
             Hide();
+        }
+
+        private void Laporan_Transaksi_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -15,7 +15,7 @@ namespace KostumKita
 {
     public partial class KostumTradisional : Form
     {
-        private string connStr = "Host=localhost;Username=postgres;Password=blackclover1;Database=KostumKita";
+        private string connStr = "Host=localhost;Username=postgres;Password=Sinta2074;Database=KostumKita";
 
         public KostumTradisional()
         {
@@ -238,9 +238,8 @@ namespace KostumKita
                             produkPanel.Controls.Add(lblDaerah);
                             produkPanel.Controls.Add(lblHarga);
                             produkPanel.Controls.Add(lblStok);
-                            lblNama.Cursor = Cursors.Hand;
                             lblNama.ForeColor = Color.Blue;
-                            lblNama.Click += (s, e) => HandleKlikKostum(nama);
+                            
 
                             // (opsional) panel juga bisa diklik
                             produkPanel.Cursor = Cursors.Hand;
