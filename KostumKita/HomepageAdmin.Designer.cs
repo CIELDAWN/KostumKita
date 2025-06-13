@@ -114,6 +114,7 @@
             HomeAdmin.TabIndex = 2;
             HomeAdmin.Text = "HOME";
             HomeAdmin.UseVisualStyleBackColor = false;
+            HomeAdmin.Click += HomeAdmin_Click;
             // 
             // HomepageAdmin
             // 

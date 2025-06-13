@@ -65,6 +65,7 @@
             b_Transaksi.Size = new Size(156, 34);
             b_Transaksi.TabIndex = 6;
             b_Transaksi.UseVisualStyleBackColor = true;
+            b_Transaksi.Click += b_Transaksi_Click;
             // 
             // b_Sewa_Beli
             // 
@@ -75,6 +76,7 @@
             b_Sewa_Beli.Size = new Size(156, 42);
             b_Sewa_Beli.TabIndex = 5;
             b_Sewa_Beli.UseVisualStyleBackColor = true;
+            b_Sewa_Beli.Click += b_Sewa_Beli_Click;
             // 
             // b_Costume
             // 
@@ -85,6 +87,7 @@
             b_Costume.Size = new Size(156, 34);
             b_Costume.TabIndex = 4;
             b_Costume.UseVisualStyleBackColor = true;
+            b_Costume.Click += b_Costume_Click;
             // 
             // b_Home
             // 
@@ -95,6 +98,7 @@
             b_Home.Size = new Size(155, 33);
             b_Home.TabIndex = 3;
             b_Home.UseVisualStyleBackColor = true;
+            b_Home.Click += b_Home_Click;
             // 
             // b_cancel
             // 

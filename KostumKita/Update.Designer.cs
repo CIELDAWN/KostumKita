@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Update));
             panel1 = new Panel();
+            button1 = new Button();
+            b_Search = new Button();
             b_Update = new Button();
             l_stock = new Label();
             b_gambar = new Button();
@@ -45,13 +47,13 @@
             b_Manage = new Button();
             b_Home = new Button();
             npgsqlCommandBuilder1 = new Npgsql.NpgsqlCommandBuilder();
-            b_Search = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(b_Search);
             panel1.Controls.Add(b_Update);
             panel1.Controls.Add(l_stock);
@@ -71,6 +73,26 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1366, 768);
             panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
+            button1.Location = new Point(832, 596);
+            button1.Name = "button1";
+            button1.Size = new Size(186, 52);
+            button1.TabIndex = 15;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // b_Search
+            // 
+            b_Search.Location = new Point(1022, 129);
+            b_Search.Name = "b_Search";
+            b_Search.Size = new Size(75, 23);
+            b_Search.TabIndex = 14;
+            b_Search.Text = "Search";
+            b_Search.UseVisualStyleBackColor = true;
+            b_Search.Click += b_Search_Click;
             // 
             // b_Update
             // 
@@ -103,9 +125,9 @@
             // 
             b_Kurang.BackgroundImage = (Image)resources.GetObject("b_Kurang.BackgroundImage");
             b_Kurang.BackgroundImageLayout = ImageLayout.Zoom;
-            b_Kurang.Location = new Point(692, 544);
+            b_Kurang.Location = new Point(689, 544);
             b_Kurang.Name = "b_Kurang";
-            b_Kurang.Size = new Size(59, 33);
+            b_Kurang.Size = new Size(59, 26);
             b_Kurang.TabIndex = 10;
             b_Kurang.UseVisualStyleBackColor = true;
             b_Kurang.Click += b_Kurang_Click;
@@ -123,9 +145,9 @@
             // 
             // tb_stock
             // 
-            tb_stock.Location = new Point(779, 550);
+            tb_stock.Location = new Point(785, 547);
             tb_stock.Name = "tb_stock";
-            tb_stock.Size = new Size(56, 23);
+            tb_stock.Size = new Size(37, 23);
             tb_stock.TabIndex = 8;
             // 
             // tb_asal
@@ -204,16 +226,6 @@
             npgsqlCommandBuilder1.QuotePrefix = "\"";
             npgsqlCommandBuilder1.QuoteSuffix = "\"";
             // 
-            // b_Search
-            // 
-            b_Search.Location = new Point(1035, 131);
-            b_Search.Name = "b_Search";
-            b_Search.Size = new Size(75, 23);
-            b_Search.TabIndex = 14;
-            b_Search.Text = "Search";
-            b_Search.UseVisualStyleBackColor = true;
-            b_Search.Click += b_Search_Click;
-            // 
             // Update
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -246,5 +258,6 @@
         private Label l_stock;
         private Button b_Update;
         private Button b_Search;
+        private Button button1;
     }
 }

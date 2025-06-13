@@ -187,6 +187,7 @@
             Controls.Add(panel1);
             Name = "HomepageKostumer";
             Text = "HomepageKostumer";
+            Load += HomepageKostumer_Load_1;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

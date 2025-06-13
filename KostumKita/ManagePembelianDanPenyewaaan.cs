@@ -81,5 +81,33 @@ namespace KostumKita
         {
 
         }
+
+        private void b_Sewa_Beli_Click(object sender, EventArgs e)
+        {
+            ManagePembelianDanPenyewaan managePembelianDanPenyewaan = new ManagePembelianDanPenyewaan();
+            managePembelianDanPenyewaan.Show();
+            Hide();
+        }
+
+        private void b_Home_Click(object sender, EventArgs e)
+        {
+            HomepageAdmin Home = new HomepageAdmin();
+            Hide();
+            Home.Show();
+        }
+
+        private void b_Costume_Click(object sender, EventArgs e)
+        {
+            ManageCostume manage = new ManageCostume();
+            Hide();
+            manage.Show();
+        }
+
+        private void b_Transaksi_Click(object sender, EventArgs e)
+        {
+            Laporan_Transaksi lapor = new Laporan_Transaksi();
+            lapor.Show();
+            Hide();
+        }
     }
 }

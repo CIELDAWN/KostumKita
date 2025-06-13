@@ -147,7 +147,7 @@ namespace KostumKita
                             cmd.Parameters.AddWithValue("@asal", tb_asal.Text);
 
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("Kostum berhasil diperbarui!","Berhasil",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        MessageBox.Show("Kostum berhasil diperbarui!", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 catch (Exception ex)
@@ -212,6 +212,13 @@ namespace KostumKita
         private void b_Search_Click(object sender, EventArgs e)
         {
             Tampilkan(tb_nama.Text);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ManageCostume manage = new ManageCostume();
+            Hide();
+            manage.Show();
         }
     }
 }

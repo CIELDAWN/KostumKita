@@ -55,7 +55,7 @@ namespace KostumKita
             ManagePembelianDanPenyewaan managePembelianDanPenyewaan = new ManagePembelianDanPenyewaan();
             managePembelianDanPenyewaan.Show();
             Hide();
-            
+
         }
 
         private void btnManageTransaksi_Click(object sender, EventArgs e)
@@ -63,6 +63,11 @@ namespace KostumKita
             Laporan_Transaksi lapor = new Laporan_Transaksi();
             lapor.Show();
             Hide();
+
+        }
+
+        private void HomeAdmin_Click(object sender, EventArgs e)
+        {
 
         }
     }
