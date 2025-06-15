@@ -38,7 +38,7 @@ namespace KostumKita
         {
             try
             {
-                string query = "SELECT * FROM transactions ORDER BY id_cart";
+                string query = "SELECT * FROM transaksi ORDER BY id_transaksi";
                 dataTable = db.ExecuteQuery(query, out dataAdapter);
 
                 dataGridView1.Columns.Clear();
